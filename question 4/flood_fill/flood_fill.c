@@ -1,12 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_point
-{
-    int x; // x : Width  | x-axis
-    int y; // y : Height | y-axis
-} t_point;
-
 void fill(char **tab, t_point size, t_point cur, char to_fill)
 {
     if (cur.y < 0 || cur.y >= size.y || cur.x < 0 || cur.x >= size.x || tab[cur.y][cur.x] != to_fill)
