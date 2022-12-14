@@ -35,3 +35,10 @@ Open a new terminal and start the exam
 3. git push
 
 4. After the git push, type `grademe`
+
+
+# Exam Details
+
+There are 4 questions in total in this exam. A random question comes from each level below.
+
+If you fail the exam, you will start again from Level 1 the next time you take the exam.
