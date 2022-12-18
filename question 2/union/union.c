@@ -1,44 +1,31 @@
 #include <unistd.h>
-#include <stdio.h>
 
-int check(int c, char *str, int index)
+int main(int ac, char **av)
 {
-    int i = 0;
-
-    while (i < index)
+    if (ac == 3)
     {
-        if (str[i] == c)
-            return 0;
-        i++;
-    }
-    return 1;
-}
-
-int main(int argc, char **argv)
-{
-    int i = 0;
-    int j = 0;
-    int k = 0;
-
-    if (argc == 3)
-    {
-        while (argv[1][i] != '\0')
+        int i = 0;
+        int alpha[26] = {0};
+        while (av[1][i])
         {
+            if (alpha[av[1][i] - 'a'] == 0)
+            {
+                write(1, &av[1][i], 1);
+                alpha[av[1][i] - 'a'] = 1;
+            }
             i++;
         }
-        while (argv[2][j] != '\0')
+        i = 0;
+        while (av[2][i])
         {
-            argv[1][i] = argv[2][j];
+            if (alpha[av[2][i] - 'a'] == 0)
+            {
+                write(1, &av[2][i], 1);
+                alpha[av[2][i] - 'a'] = 1;
+            }
             i++;
-            j++;
-        }
-        i--;
-        while (k <= i)
-        {
-            if (check(argv[1][k], argv[1], k) == 1)
-                write(1, &argv[1][k], 1);
-            k++;
         }
     }
     write(1, "\n", 1);
+    return (0);
 }

@@ -9,18 +9,21 @@ void ft_putstr(char const *str)
         write(1, &str[i++], 1);
 }
 
-int main(int argc, char const *argv[])
+int main(int ac, char const *av[])
 {
     int i = 0;
     int j = 0;
 
-    if (argc == 3)
+    if (ac == 3)
     {
-        while (argv[2][j])
-            if (argv[2][j++] == argv[1][i])
-                i += 1;
-        if (!argv[1][i])
-            ft_putstr(argv[1]);
+        while (av[2][j])
+        {
+            if (av[2][j] == av[1][i])
+                i++;
+            j++;
+        }
+        if (av[1][i] == '\0')
+            ft_putstr(av[1]);
     }
     write(1, "\n", 1);
     return (0);

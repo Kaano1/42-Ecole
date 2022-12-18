@@ -3,9 +3,9 @@
 
 int main(int ac, char **av)
 {
-    int i = 0;
-    int ii = 0;
     int k = 0;
+    int s_1 = 0;
+    int s_2 = 0;
     char *s1;
     char *s2;
 
@@ -13,28 +13,28 @@ int main(int ac, char **av)
     {
         s1 = av[1];
         s2 = av[2];
-        while (s1[i])
+        while (s1[s_1])
         {
-            ii = 0;
-            while (s2[ii])
+            s_2 = 0;
+            while (s2[s_2])
             {
-                if (s1[i] == s2[ii])
+                if (s1[s_1] == s2[s_2])
                 {
                     k = 0;
-                    while (s1[i] != s1[k])
+                    while (s1[s_1] != s1[k])
                         k++;
-                    if (k == i)
+                    if (s_1 == k)
                     {
                         k = 0;
-                        while (s2[k] != s2[ii])
+                        while (s2[s_2] != s2[k])
                             k++;
-                        if (k == ii)
-                            write(1, &s1[i], 1);
+                        if (s_2 == k)
+                            write(1, &s1[s_1], 1);
                     }
                 }
-                ii++;
+                s_2++;
             }
-            i++;
+            s_1++;
         }
     }
     write(1, "\n", 1);
