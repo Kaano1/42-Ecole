@@ -18,11 +18,10 @@ void ft_hex(int n)
         ft_hex(n / 16);
     write(1, &i[n % 16], 1);
 }
-/*
+
 int main(int argc, char **argv)
 {
     if (argc == 2)
         ft_hex(ft_atoi(argv[1]));
     write(1, "\n", 1);
 }
-*/
