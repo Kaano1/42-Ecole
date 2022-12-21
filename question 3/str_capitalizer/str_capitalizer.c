@@ -41,7 +41,7 @@ int main(int argc, char **argv)
         while (i < argc)
         {
             str_capitalizer(argv[i]);
-            ++i;
+            i++;
         }
     }
 
