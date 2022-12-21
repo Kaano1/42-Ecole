@@ -1,27 +1,21 @@
-#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 
 int *ft_rrange(int start, int end)
 {
     int *range;
-    int i = 0;
-    int n = end - start + 1;
+    int n = start > end ? start - end + 1 : end - start + 1;
+    int dir = start < end ? 1 : -1;
 
-    if (start > end)
-        return (ft_rrange(end, start));
     range = (int *)malloc(sizeof(int) * n);
-    if (range)
+    while (n--)
     {
-        while (i < n)
-        {
-            range[i] = start;
-            start++;
-            i++;
-        }
+        range[n] = start;
+        start += dir;
     }
-    return (range);
+    return range;
 }
+
 /*
 int main()
 {
