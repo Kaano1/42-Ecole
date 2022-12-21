@@ -3,9 +3,13 @@
 int ft_atoi(char *str)
 {
     int i = 0;
-    while (*str >= '0' && *str <= '9')
-        i = i * 10 + *str++ - '0';
-    return (i);
+    int nbr = 0;
+    while (str[i] && str[i] >= '0' && str[i] <= '9')
+    {
+        nbr = nbr * 10 + str[i] - '0';
+        i++;
+    }
+    return (nbr);
 }
 
 void ft_putnbr(int n)
@@ -15,42 +19,39 @@ void ft_putnbr(int n)
     write(1, &"0123456789"[n % 10], 1);
 }
 
-int is_prime(int n)
+int is_prime(int nbr)
 {
     int i = 2;
 
-    while (i < n)
+    while (i < nbr)
     {
-        if (n % i == 0)
+        if (nbr % i == 0)
             return (0);
-        ++i;
+        i++;
     }
     return (1);
 }
 
-int add_prime_sum(int n)
-{
-    int sum = 0;
-    int i = 2;
-
-    while (i <= n)
-    {
-        if (is_prime(i) == 1)
-            sum += i;
-        ++i;
-    }
-    return (sum);
-}
-
 int main(int ac, char **av)
 {
-    int n = ft_atoi(av[1]);
 
-    if ((ac == 2) && n)
-        ft_putnbr(add_prime_sum(n));
+    int i = 2;
+    int k = 0;
+    int nbr;
+
+    if (ac == 2)
+    {
+        nbr = ft_atoi(av[1]);
+        while (i <= nbr)
+        {
+            if (is_prime(i))
+                k += i;
+            i++;
+        }
+        ft_putnbr(k);
+    }
     else
-        ft_putnbr(0);
+        write(1, "0", 1);
     write(1, "\n", 1);
     return (0);
 }
-
