@@ -21,8 +21,8 @@ int main()
 {
     int *tab;
     int i;
-    tab = ft_rrange(5, -5);
-    while (i < 11)
+    tab = ft_rrange(1, 5);
+    while (i < 5)
     {
         printf("%d\n", tab[i]);
         i++;
