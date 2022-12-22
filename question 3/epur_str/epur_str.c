@@ -9,7 +9,7 @@ int main(int ac, char **av)
     {
         i = 0;
         while (av[1][i] == ' ' || av[1][i] == '\t')
-            k++;
+            i++;
         while (av[1][i])
         {
             if (av[1][i] == ' ' || av[1][i] == '\t')
@@ -25,5 +25,4 @@ int main(int ac, char **av)
         }
     }
     write(1, "\n", 1);
-    return (0);
 }

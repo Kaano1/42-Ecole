@@ -3,15 +3,15 @@
 int main(int ac, char **av)
 {
     int i = 0;
-    int l = 0;
+    int j = 0;
 
     if (ac == 3)
     {
-        while (av[1][i] && av[2][l])
+        while (av[1][i] && av[2][j])
         {
-            if (av[1][i] == av[2][l])
+            if (av[1][i] == av[2][j])
                 i++;
-            l++;
+            j++;
         }
         if (av[1][i] == '\0')
             write(1, "1", 1);

@@ -1,27 +1,34 @@
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int *ft_range(int start, int end)
 {
-    int size = end - start;
-    int *ret;
-    int *ptr;
+    int *range;
+    int i = (end - start) + 1;
 
-    if (size)
+    if (start >= end)
+        return (NULL);
+    range = (int *)malloc(sizeof(int) * (i));
+    i = 0;
+    while (start <= end)
     {
-        ptr = (int *)malloc(sizeof(int) * size);
-        if (ptr)
-        {
-            ret = ptr;
-            while (start <= end)
-            {
-                *ptr = start;
-                ptr++;
-                start++;
-            }
-            return (ret);
-        }
+        range[i] = start;
+        start++;
+        i++;
     }
-    return (NULL);
+    return (range);
 }
+
+/*
+int main()
+{
+    int *tab;
+    int i;
+    tab = ft_range(1, 5);
+    while (i < 5)
+    {
+        printf("%d\n", tab[i]);
+        i++;
+    }
+}
+*/

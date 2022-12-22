@@ -1,27 +1,27 @@
 #include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int ft_atoi(char *str)
 {
-    int n = 0;
-    while (*str != '\0')
-        n = n * 10 + *str++ - '0';
-    return (n);
+    int i = 0;
+    int k = 0;
+    while (str[i])
+    {
+        k = k * 10 + str[i] - '0';
+        i++;
+    }
+    return (k);
 }
 
 void ft_hex(int n)
 {
-    char i[] = "0123456789abcdef";
-
     if (n >= 16)
         ft_hex(n / 16);
-    write(1, &i[n % 16], 1);
+    write(1, &"0123456789abcdef"[n % 16], 1);
 }
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-    if (argc == 2)
-        ft_hex(ft_atoi(argv[1]));
+    if (ac == 2)
+        ft_hex(ft_atoi(av[1]));
     write(1, "\n", 1);
 }
