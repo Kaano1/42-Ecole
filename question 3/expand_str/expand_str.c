@@ -13,7 +13,7 @@ int main(int ac, char **av)
         while (av[1][i])
         {
             if (av[1][i] == ' ' || av[1][i] == '\t')
-                k++;
+                k = 1;
             if (!(av[1][i] == ' ' || av[1][i] == '\t'))
             {
                 if (k)
