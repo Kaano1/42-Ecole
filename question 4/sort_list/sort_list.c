@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include "list.h"
 
 typedef struct s_list t_list;
 
