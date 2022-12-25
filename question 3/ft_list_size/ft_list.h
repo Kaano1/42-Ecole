@@ -1,8 +1,5 @@
 #ifndef FT_LIST_H
-#define FT_LIST_H
-
-#include <stdlib.h>
-#include <stdio.h>
+# define FT_LIST_H
 
 typedef struct s_list
 {

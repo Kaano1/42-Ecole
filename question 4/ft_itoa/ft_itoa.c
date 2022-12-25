@@ -22,17 +22,15 @@ int ft_len(int nbr)
 }
 char *ft_itoa(int nbr)
 {
-	char *res;
-	int len;
-
-	len = ft_len(nbr);
-	res = malloc(sizeof(char) * (len + 1));
+    int len = ft_len(nbr);
+    char *res = malloc(sizeof(char) * (len + 1));
 	res[len] = '\0';
 
 	if (nbr < 0)
 		res[0] = '-';
 	else if (nbr == 0)
 		res[0] = '0';
+    
 	while (nbr != 0)
 	{
 		--len;

@@ -16,7 +16,6 @@ unsigned int lcm(unsigned int a, unsigned int b)
         if (k % a == 0 && k % b == 0)
             return (k);
         k++;
-        ;
     }
 }
 /*
