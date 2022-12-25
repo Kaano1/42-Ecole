@@ -2,9 +2,9 @@
 
 void    ft_swap(int *a, int *b)
 {
-    int dll;
+    int tmp;
 
-    dll = *a;
+    tmp = *a;
     *a = *b;
-    *b = dll;
+    *b = tmp;
 }
