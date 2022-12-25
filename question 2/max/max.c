@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include <stdio.h>
 
 int max(int *tab, unsigned int len)
@@ -18,7 +17,6 @@ int max(int *tab, unsigned int len)
 int main()
 {
     int tab[] = {-42, 4000000, -5, -20, 2, -200, 99};
-
     printf("max : %d\n", max(tab, 7));
 }
 */

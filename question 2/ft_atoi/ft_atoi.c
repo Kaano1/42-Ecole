@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 
 int ft_atoi(const char *str)
 {
@@ -22,7 +21,7 @@ int ft_atoi(const char *str)
 int main()
 {
     int res;
-    res = ft_atoi("-42leo");
+    res = ft_atoi("-42leonardoo");
     printf("%d\n", res);
 }
 */
