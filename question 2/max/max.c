@@ -2,6 +2,8 @@
 
 int max(int *tab, unsigned int len)
 {
+    if (tab == NULL || len == 0)
+        return (0);
     int i = 0;
     int res = tab[i];
 
