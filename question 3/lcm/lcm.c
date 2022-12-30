@@ -9,7 +9,8 @@ unsigned int lcm(unsigned int a, unsigned int b)
 
     if (a > b)
         k = a;
-    k = b;
+    else
+        k = b;
 
     while (1)
     {

@@ -19,9 +19,8 @@ int *ft_rrange(int start, int end)
 /*
 int main()
 {
-    int *tab;
-    int i;
-    tab = ft_rrange(1, 5);
+    int *tab = ft_rrange(1, 5);
+    int i = 0;
     while (i < 5)
     {
         printf("%d\n", tab[i]);
