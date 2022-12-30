@@ -2,8 +2,6 @@
 
 void ft_putnbr(int n)
 {
-    char nbr;
-
     if (n >= 10)
         ft_putnbr(n / 10);
     write(1, &"0123456789"[n % 10], 1);
