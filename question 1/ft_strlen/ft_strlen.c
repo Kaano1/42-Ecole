@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 int ft_strlen(char *str)
 {
@@ -8,3 +8,11 @@ int ft_strlen(char *str)
         i++;
     return (i);
 }
+
+/*
+int main()
+{
+    char res[] = "abcdef";
+    printf("%d\n", ft_strlen(res));
+}
+*/
