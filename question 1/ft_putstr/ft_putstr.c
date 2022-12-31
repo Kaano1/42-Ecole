@@ -10,6 +10,6 @@ void ft_putstr(char *str)
 /*
 int main()
 {
-    ft_putstr("leonardoo");
+    ft_putstr("goooood");
 }
 */
