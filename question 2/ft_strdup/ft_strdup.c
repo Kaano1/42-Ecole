@@ -23,6 +23,6 @@ char *ft_strdup(char *src)
 /*
 int main()
 {
-    printf("%s\n", ft_strdup("leonardoo dll wq"));
+    printf("%s\n", ft_strdup("good"));
 }
 */
