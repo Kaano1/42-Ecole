@@ -28,3 +28,30 @@ int main()
     }
 }
 */
+
+//-----------------------------------------------------------------
+
+   start > end ? start - end + 1 : end - start + 1;
+
+//  I am explaining the definition you see above for those who do not know or see it for the first time.
+
+//  This means an if else condition
+
+//  We can describe this situation as follows.
+
+/*
+    int k;
+    int dir;
+
+    if (start > end)
+        k = start - end + 1;
+    else
+        k = end - start + 1;
+
+    if (start < end)
+        dir = 1;
+    else
+        dir = -1;
+*/
+
+//-----------------------------------------------------------------
