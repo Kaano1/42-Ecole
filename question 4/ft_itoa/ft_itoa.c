@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 int ft_negative(int nbr)
 {
@@ -40,7 +41,6 @@ char *ft_itoa(int nbr)
 	return (res);
 }
 
-//-------------------------------------------------------
 /*
 int main(void)
 {
