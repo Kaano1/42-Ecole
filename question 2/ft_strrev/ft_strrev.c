@@ -18,11 +18,9 @@ char *ft_strrev(char *str)
     return (str);
 }
 /*
-int main(int ac, char **argv)
+int main()
 {
-    char *s = argv[1];
-    ft_strrev(s);
-    printf("%s\n", s);
-    return (0);
+    char res[] = "good";
+    printf("%s\n", ft_strrev(res));
 }
 */
