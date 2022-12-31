@@ -14,7 +14,7 @@ int main(int ac, char **av)
         {
             if (av[1][i] == ' ' || av[1][i] == '\t')
                 k = 1;
-            if (!(av[1][i] == ' ' || av[1][i] == '\t'))  // if (av[1][i] != ' ' && av[1][i] != '\t') -- It can also be written like this
+            if (!(av[1][i] == ' ' || av[1][i] == '\t'))  // if (av[1][i] != ' ' && av[1][i] != '\t')  -->  It can also be written like this
             {
                 if (k)
                     write(1, " ", 1);
