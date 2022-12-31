@@ -8,12 +8,9 @@ unsigned char swap_bits(unsigned char octet)
 /*
 int main(void)
 {
-    char letter_t;
-    char letter_G;
-    letter_t = 't';
-    letter_G = 'G';
-
-    printf("letter_t after swap: %c\n", swap_bits(letter_t));
-    printf("letter_G after swap: %c\n", swap_bits(letter_G));
+    char k1 = 't';
+    char k2 = 'G';
+    printf("k1_t After: %c\n", swap_bits(k1));
+    printf("k2_G After: %c\n", swap_bits(k2));
 }
 */
