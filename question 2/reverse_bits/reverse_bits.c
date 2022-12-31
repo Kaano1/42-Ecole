@@ -14,7 +14,7 @@ unsigned char reverse_bits(unsigned char octet)
 /*
 int main()
 {
-    printf("%d", reverse_bits(38));
-    return (0);
+    printf("%d\n", reverse_bits(38));
+    printf("%d\n", reverse_bits(100));
 }
 */
