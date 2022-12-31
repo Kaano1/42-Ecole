@@ -5,7 +5,7 @@ int ft_atoi(char *str)
     int i = 0;
     int k = 0;
 
-    while (str[i] >= '0' && str[i] <= '9')
+    while (str[i] && str[i] >= '0' && str[i] <= '9')
     {
         k = k * 10 + str[i] - '0';
         str++;
