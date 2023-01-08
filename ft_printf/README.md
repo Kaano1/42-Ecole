@@ -19,7 +19,7 @@ Before you start we advise you to read the `man 3 printf` and the `man va_arg`.<
 To test your program compare your results with the true printf.
 
 
-Examples of the function output:
+<br /> Examples of the function output:
 
 call: ft_printf("%s\n", "toto"); <br />
 out: toto$
