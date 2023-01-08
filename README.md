@@ -27,10 +27,11 @@ There are 2 questions in total in this exam. One of the following 2 questions co
 # Exam Questions
 
 ### Question
-```
-  - get_next_line
-  - ft_printf
-```
+
+- [Get_Next_Line](https://github.com/farukdll/Exam_03)
+  - .....
+- [Ft_Printf](https://github.com/farukdll/Exam_03) 
+  - 1 file, 3 functions and 50 lines
 
 # Exam Norminette
 
