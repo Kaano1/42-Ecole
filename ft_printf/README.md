@@ -11,8 +11,13 @@ it will manage only the following conversions:
 s (string), d (decimal) and x (lowercase hexademical). 
 
 
-Your function must be declared as follows: 
+Your function must be declared as follows:
+
 <br /> int ft_printf(const char *, ... );
+
+Before you start we advise you to read the `man 3 printf` and the `man va_arg`.
+To test your program compare your results with the true printf.
+
 
 Examples of the function output:
 
