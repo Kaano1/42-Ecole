@@ -1,8 +1,9 @@
 # Subject
 
-Assignment name  : ft_printf <br />
-Expected files   : ft_printf.c <br />
-Allowed functions: malloc, free, write, va_start, va_arg, va_copy, va_end <br />
+Assignment name  : ft_printf
+Expected files   : ft_printf.c
+Allowed functions: malloc, free, write, va_start, va_arg, va_copy, va_end
+-------------------------------------------------------------------------------- <br />
 
 Write a function named `ft_printf` that will mimic the real printf but 
 it will manage only the following conversions:
