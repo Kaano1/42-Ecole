@@ -1,6 +1,3 @@
-# Exam_03
-42-Exam-Rank-03
-
 # Exam Login Details
 
     login -> exam
