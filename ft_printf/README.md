@@ -15,7 +15,7 @@ Your function must be declared as follows:
 
 <br /> int ft_printf(const char *, ... );
 
-Before you start we advise you to read the `man 3 printf` and the `man va_arg`.
+Before you start we advise you to read the `man 3 printf` and the `man va_arg`.<br />
 To test your program compare your results with the true printf.
 
 
