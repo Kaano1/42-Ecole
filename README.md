@@ -30,7 +30,7 @@ Open a new terminal and start the exam
     
 1. git add .
 
-2. git commit -m "done"
+2. git commit -m "exam2"
 
 3. git push
 
