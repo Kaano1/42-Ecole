@@ -19,3 +19,15 @@ git push (don't forget to do)
 
 4. After the git push, type `grademe`
 -----------------------------------
+
+# Exam Details
+
+There are 2 questions in total in this exam. One of the following 2 questions comes
+
+# Exam Questions
+
+### Question
+```
+  - get_next_line
+  - ft_printf
+```
