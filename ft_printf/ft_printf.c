@@ -47,3 +47,89 @@ int ft_printf(const char *str, ...)
     va_end(pointer);
     return (leng);
 }
+
+----------------------------------------------------------------------------------
+
+// ----------------------   We can also write the prif as: -----------------------
+
+/*
+int ft_putchar(char c)
+{
+	return(write(1, &c, 1));
+}
+
+int ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		str = "(null)";
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}	
+	return (i);
+}
+
+
+int	ft_putbase(unsigned int nbr, int base)
+{
+	int n;
+	char *base_set;
+	int count;
+	
+	n = 0;
+	count = 0;
+	base_set = "0123456789abcdef";
+	n = nbr % base;
+	if (nbr / base > 0)
+		count += ft_putbase(nbr / base, base);
+	count += ft_putchar(base_set[n]);
+	return(count);
+}
+
+int	ft_putint(int nbr)
+{
+	int count;
+
+	count = 0;
+	if (nbr < 0)
+	{	
+		nbr *= -1;
+		count += ft_putchar('-');
+	}
+	count += ft_putbase(nbr, 10);
+	return(count);
+}
+
+int ft_printf(const char *str, ...)
+{
+	int i;
+	int count;
+	va_list args;
+
+	i = 0;
+	count = 0;
+	va_start(args, str);
+	while (str[i])
+	{
+		if (str[i] == '%')
+		{
+			i++;
+			if(str[i] == 's')
+				count += ft_putstr(va_arg(args, char *));
+			else if (str[i] == 'd')
+				count += ft_putint(va_arg(args, int));
+			else if (str[i] == 'x')
+				count += ft_putbase(va_arg(args, unsigned int), 16);
+		}
+		else
+			count += ft_putchar(str[i]);
+		i++;
+	}
+	va_end(args);
+	return(count);
+}
+*/
