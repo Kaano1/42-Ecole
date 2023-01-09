@@ -60,9 +60,8 @@ int ft_putchar(char c)
 
 int ft_putstr(char *str)
 {
-	int	i;
+	int	i = 0;
 
-	i = 0;
 	if (!str)
 		str = "(null)";
 	while (str[i])
@@ -76,13 +75,10 @@ int ft_putstr(char *str)
 
 int	ft_putbase(unsigned int nbr, int base)
 {
-	int n;
-	char *base_set;
-	int count;
+	int n = 0;
+	int count = 0;
+	char *base_set = "0123456789abcdef";
 	
-	n = 0;
-	count = 0;
-	base_set = "0123456789abcdef";
 	n = nbr % base;
 	if (nbr / base > 0)
 		count += ft_putbase(nbr / base, base);
@@ -92,9 +88,8 @@ int	ft_putbase(unsigned int nbr, int base)
 
 int	ft_putint(int nbr)
 {
-	int count;
+	int count = 0;
 
-	count = 0;
 	if (nbr < 0)
 	{	
 		nbr *= -1;
@@ -106,13 +101,12 @@ int	ft_putint(int nbr)
 
 int ft_printf(const char *str, ...)
 {
-	int i;
-	int count;
+	int i = 0;
+	int count = 0;
+	
 	va_list args;
-
-	i = 0;
-	count = 0;
 	va_start(args, str);
+	
 	while (str[i])
 	{
 		if (str[i] == '%')
