@@ -2,18 +2,21 @@
 
 int max(int *tab, unsigned int len)
 {
-    if (tab == NULL || len == 0)
+    unsigned int i = 0;
+    int max;
+    
+    if (len == i)
         return (0);
-    int i = 0;
-    int res = tab[i];
-
-    while (i < len)
+    
+    max = tab[0];
+    
+    while (len > 0 && i < len)
     {
-        if (res < tab[i])
-            res = tab[i];
+        if (tab[i] >= max)
+            max = tab[i];
         i++;
     }
-    return (res);
+    return (max);
 }
 /*
 int main()
