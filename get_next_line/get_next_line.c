@@ -1,8 +1,9 @@
 #include <unistd.h>
 #include <stdlib.h>
+//#include "get_next_line.h"
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42 
+#ifndef BUFFER_SIZE       // Do not forget to transfer these 3 lines to the .h file, as the exam asks for a .h file.
+# define BUFFER_SIZE 42
 #endif
 
 
