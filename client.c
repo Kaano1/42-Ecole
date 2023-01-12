@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 00:37:01 by ayumusak          #+#    #+#             */
-/*   Updated: 2022/03/01 17:27:10 by ayumusak         ###   ########.tr       */
+/*   Updated: 2023/01/12 16:47:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,9 @@ int	ft_atoi(char *str)
 {
 	int	i;
 	int	num;
-	int	s;
 
 	i = 0;
 	num = 0;
-	s = 1;
-	if (str[i] == '-')
-	{
-		s = -1;
-	}
 	while (str[i] <= '9' && str[i] >= '0')
 	{
 		num = (str[i] - '0') + (num * 10);
