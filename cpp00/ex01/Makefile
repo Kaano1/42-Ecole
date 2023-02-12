@@ -1,19 +1,22 @@
-C++ = g++
-SRCS = phone.cpp
-OBJS = $(SRCS:.cpp=.o)
-NAME = mobilePhone
-FLAGS = #-Wall -Wextra -Werror -std=c++98
-RM = rm -rf
+SRC = main.cpp Phonebook.cpp
+OBJ = $(SRC:.cpp=.o)
+CC = g++
+RM = rm -f
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
+NAME = phonebook
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(C++) $(FLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
 
-clean:
-	$(RM) *.o
+re: fclean $(NAME)
 
-.PHONY: all fclean clean
+.PHONY: all clean fclean re
