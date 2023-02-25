@@ -9,7 +9,7 @@ DiamondTrap::DiamondTrap()
 	FragTrap::damage = 30;
 	ScavTrap::Energy = 50;
 
-    cout << "Diamond worked" << endl;
+	cout << "Diamond worked" << endl;
 }
 
 DiamondTrap::DiamondTrap(const string nick) : ClapTrap(nick)
@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap(const string nick) : ClapTrap(nick)
 	FragTrap::Hit = 100;
 	FragTrap::damage = 30;
 	ScavTrap::Energy = 50;
-    cout << "Diamond worked" << endl;
+	cout << "Diamond worked" << endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& oth)
@@ -31,7 +31,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap& oth)
 
 DiamondTrap::~DiamondTrap()
 {
-    cout << "Diamond Deconstructer called" << endl;
+	cout << "Diamond Deconstructer called" << endl;
 }
 
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& oth)

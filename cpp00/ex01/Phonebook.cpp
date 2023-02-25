@@ -90,7 +90,7 @@ void	PhoneBook::add_contact(void)
 	static int i = 0;
 	string str;
 
-    if(i >= 8)
+	if(i >= 8)
 		i = 0;
 	if(add_cnt < 8)
 		add_cnt++;

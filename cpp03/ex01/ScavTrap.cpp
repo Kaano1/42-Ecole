@@ -2,16 +2,16 @@
 
 ScavTrap::ScavTrap()
 {
-    name = "Default";
-    Hit = 100;
+	name = "Default";
+	Hit = 100;
 	damage = 20;
 	Energy = 50;
-    cout << "ScavTrap Worked" << endl;
+	cout << "ScavTrap Worked" << endl;
 }
 
 ScavTrap::ScavTrap(const string nick)
 {
-    name = nick;
+	name = nick;
 	Hit = 100;
 	damage = 20;
 	Energy = 50;
@@ -31,14 +31,14 @@ ScavTrap::~ScavTrap()
 
 ScavTrap& ScavTrap::operator = (const ScavTrap& oth)
 {
-    if (this != &oth)
-    {
-        ClapTrap::operator=(oth);
-    }
-    return *this;
+	if (this != &oth)
+	{
+		ClapTrap::operator=(oth);
+	}
+	return *this;
 }
 
 void ScavTrap::guardGate()
 {
-    cout << "***We are the champions***\nssshh class in a gate keeper mode" << endl;
+	cout << "***We are the champions***\nssshh class in a gate keeper mode" << endl;
 }

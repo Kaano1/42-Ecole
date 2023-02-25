@@ -20,7 +20,7 @@ Fixed::Fixed(const float c)
 
 Fixed::~Fixed()
 {
-    cout << "Destructor called"<< endl;
+	cout << "Destructor called"<< endl;
 }
 
 Fixed::Fixed(const Fixed& cpy)
@@ -34,16 +34,18 @@ int Fixed::getRawBits(void) const
 	cout << "getRawBits member function called" << endl;
 	return (fixnum);
 }
-void    Fixed::operator=(const Fixed& opr)
+
+Fixed	&Fixed::operator=(const Fixed& opr)
 {
 	fixnum = opr.fixnum;
 	cout << "Copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	cout << "setRawBits member function called" << endl;
-    fixnum = raw;
+	fixnum = raw;
 }
 
 float Fixed::toFloat(void) const

@@ -12,7 +12,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 {
 	private:
 		string name;
-    public:
+	public:
 		DiamondTrap();
 		DiamondTrap(const string nick);
 		DiamondTrap(const DiamondTrap& oth);

@@ -11,12 +11,12 @@ using	std::endl;
 
 class Cat : public Animal
 {
-    public:
-        Cat();
+	public:
+		Cat();
 		Cat(const Cat& oth);
 		~Cat();
 		void	operator=(const Cat& oth);
-        virtual void	makeSound() const;
+		virtual void	makeSound() const;
 };
 
 #endif

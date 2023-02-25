@@ -11,12 +11,12 @@ using	std::endl;
 
 class WrongDog : public  WrongAnimal
 {
-    public:
-        WrongDog();
+	public:
+		WrongDog();
 		WrongDog(const WrongDog&oth);
 		~WrongDog();
 		void	operator=(const WrongDog& oth);
-        void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

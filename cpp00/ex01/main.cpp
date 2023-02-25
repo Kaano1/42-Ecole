@@ -8,11 +8,11 @@ void	welcome_to_phonebook(PhoneBook &obj)
 	getline(cin, cmd);
 	if (cmd == "ADD")
 		obj.add_contact();
-    else if (cmd == "SEARCH")
+	else if (cmd == "SEARCH")
 		obj.search_contact();
-    else if (cmd == "EXIT")
+	else if (cmd == "EXIT")
 		exit(1);
-    else
+	else
 		cout << "Wrong Command! Please Retype.." << endl;
 }
 

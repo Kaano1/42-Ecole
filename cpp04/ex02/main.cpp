@@ -9,7 +9,7 @@ int main()
 	Dog	*duckObject = new Dog;
 
 	Animal *animalobject[] = {catObject, dogObject, duckObject};
-    
+	
 	for (int i = 0; i < 3; i++)
 		animalobject[i]->makeSound();
 }

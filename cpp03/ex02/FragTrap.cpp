@@ -2,16 +2,16 @@
 
 FragTrap::FragTrap()
 {
-    name = "Default";
-    Hit = 100;
+	name = "Default";
+	Hit = 100;
 	damage = 20;
 	Energy = 50;
-    cout << "ScavTrap Worked" << endl;
+	cout << "ScavTrap Worked" << endl;
 }
 
 FragTrap::FragTrap(const string nick)
 {
-    name = nick;
+	name = nick;
 	Hit = 100;
 	damage = 20;
 	Energy = 50;
@@ -31,14 +31,14 @@ FragTrap::~FragTrap()
 
 FragTrap&   FragTrap::operator = (const FragTrap& oth)
 {
-    if (this != &oth)
-    {
-        ClapTrap::operator=(oth);
-    }
-    return *this;
+	if (this != &oth)
+	{
+		ClapTrap::operator=(oth);
+	}
+	return *this;
 }
 
-void    FragTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void)
 {
-    cout << "HIGH FIVE" << endl;
+	cout << "HIGH FIVE" << endl;
 }
