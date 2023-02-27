@@ -8,10 +8,10 @@ using	std::endl;
 class	ClapTrap
 {
 	private:
-		string name;
-		int	Hit;
-		int	Energy;
-		int	damage;
+		string	name;
+		int		Hit;
+		int		Energy;
+		int		damage;
 	public:
 		ClapTrap();
 		ClapTrap(const string nick);

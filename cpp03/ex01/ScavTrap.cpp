@@ -15,12 +15,12 @@ ScavTrap::ScavTrap(const string nick)
 	Hit = 100;
 	damage = 20;
 	Energy = 50;
-	cout << "Nick name constructer worked" << endl;
+	cout << "Nick name constructer Worked" << endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& oth) :ClapTrap(oth)
+ScavTrap::ScavTrap(const ScavTrap& oth) : ClapTrap(oth)
 {
-	cout << "ScavTrap worked" << endl;
+	cout << "Copy ScavTrap Worked" << endl;
 	*this = oth;
 }
 
@@ -34,6 +34,7 @@ ScavTrap& ScavTrap::operator = (const ScavTrap& oth)
 	if (this != &oth)
 	{
 		ClapTrap::operator=(oth);
+		cout << "ScavTrap Copy assigment Worked" << endl;
 	}
 	return *this;
 }

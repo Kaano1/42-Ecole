@@ -3,7 +3,7 @@
 Cat::Cat()
 {
 	type = "Cat";
-	cout << "Cat worked" << endl;
+	cout << "Cat Worked" << endl;
 }
 
 Cat::Cat(const Cat& oth)

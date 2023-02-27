@@ -15,12 +15,12 @@ FragTrap::FragTrap(const string nick)
 	Hit = 100;
 	damage = 20;
 	Energy = 50;
-	cout << "Nick name constructer worked" << endl;
+	cout << "Nick name constructer Worked" << endl;
 }
 
 FragTrap::FragTrap(const FragTrap& oth) :ClapTrap(oth)
 {
-	cout << "ScavTrap worked" << endl;
+	cout << "ScavTrap Worked" << endl;
 	*this = oth;
 }
 
@@ -34,6 +34,7 @@ FragTrap&   FragTrap::operator = (const FragTrap& oth)
 	if (this != &oth)
 	{
 		ClapTrap::operator=(oth);
+		cout << "FlagTrap Copy assigment Worked" << endl;
 	}
 	return *this;
 }

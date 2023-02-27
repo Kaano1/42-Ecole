@@ -2,13 +2,13 @@
 
 Brain::Brain()
 {
-	cout << "Brain worked" << endl;
+	cout << "Brain Worked" << endl;
 }
 
 Brain::Brain(const Brain& oth)
 {
 	*this = oth;
-	cout << "Brain copy worked" << endl;
+	cout << "Brain copy Worked" << endl;
 }
 
 Brain::~Brain()

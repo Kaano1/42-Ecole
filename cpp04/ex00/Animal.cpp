@@ -3,7 +3,7 @@
 Animal::Animal()
 {
 	type = "Animal";
-	cout << "Animal worked" << endl;
+	cout << "Animal Worked" << endl;
 }
 
 Animal::Animal(const Animal& oth)

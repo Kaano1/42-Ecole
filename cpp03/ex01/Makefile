@@ -8,7 +8,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(C++) $(CPPFLAGS) $(SRCS) -o $(NAME)
+	$(C++) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)

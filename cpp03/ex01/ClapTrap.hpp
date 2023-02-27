@@ -16,9 +16,9 @@ class	ClapTrap
 		ClapTrap();
 		ClapTrap(const string nick);
 		ClapTrap(const ClapTrap& oth);
-		ClapTrap&	operator=(const ClapTrap& oth);
 		~ClapTrap();
-		void	attack(const string& target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		ClapTrap&	operator=(const ClapTrap& oth);
+		void		attack(const string& target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
 };

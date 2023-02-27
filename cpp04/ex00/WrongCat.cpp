@@ -3,7 +3,7 @@
 WrongCat::WrongCat()
 {
 	type = "Cat";
-	cout << "WrongCat worked" << endl;
+	cout << "WrongCat Worked" << endl;
 }
 
 WrongCat::WrongCat(const WrongCat& oth)

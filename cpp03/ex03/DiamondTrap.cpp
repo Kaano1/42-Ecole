@@ -4,12 +4,12 @@
 DiamondTrap::DiamondTrap()
 {
 	name = "";
-	ClapTrap::name = "Inanc";
+	ClapTrap::name = "Inanc_clap_name";
 	FragTrap::Hit = 100;
 	FragTrap::damage = 30;
 	ScavTrap::Energy = 50;
 
-	cout << "Diamond worked" << endl;
+	cout << "Diamond Worked" << endl;
 }
 
 DiamondTrap::DiamondTrap(const string nick) : ClapTrap(nick)
@@ -18,15 +18,15 @@ DiamondTrap::DiamondTrap(const string nick) : ClapTrap(nick)
 	FragTrap::Hit = 100;
 	FragTrap::damage = 30;
 	ScavTrap::Energy = 50;
-	cout << "Diamond worked" << endl;
+	cout << "Diamond Worked" << endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& oth)
+DiamondTrap::DiamondTrap(const DiamondTrap& oth) : ClapTrap(oth.get_name() + "_clap_name")
 {
-	Hit = oth.Hit;
-	damage = oth.damage;
-	Energy = oth.Energy;
-	cout << "Copy Diamond worked" << endl;
+	FragTrap::Hit = oth.Hit;
+	FragTrap::damage = oth.damage;
+	ScavTrap::Energy = oth.Energy;
+	cout << "Copy Diamond Worked" << endl;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -43,6 +43,7 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& oth)
 	FragTrap::Hit = oth.Hit;
 	FragTrap::damage = oth.damage;
 	ScavTrap::Energy = oth.Energy;
+	cout << "DiamondTrap Copy assigment Worked" << endl;
 	return (*this);
 }
 
@@ -52,22 +53,22 @@ void	DiamondTrap::whoAmI(void)
 	cout << "whoamI" << endl;
 }
 
-string	DiamondTrap::get_name()
+string	DiamondTrap::get_name() const
 {
 	return (name);
 }
 
-int	DiamondTrap::get_Hit()
+int	DiamondTrap::get_Hit() const
 {
 	return (Hit);
 }
 
-int	DiamondTrap::get_Energy()
+int	DiamondTrap::get_Energy() const
 {
 	return (Energy);
 }
 
-int	DiamondTrap::get_damage()
+int	DiamondTrap::get_damage() const
 {
 	return (damage);
 }

@@ -3,7 +3,7 @@
 Dog::Dog()
 {
 	type = "Dog";
-	cout << "Dog constructer worked" << endl;
+	cout << "Dog constructer Worked" << endl;
 	beg = new Brain();
 }
 

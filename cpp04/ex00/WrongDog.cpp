@@ -3,7 +3,7 @@
 WrongDog::WrongDog()
 {
 	type = "WrongDog";
-	cout << "WrongDog constructer worked" << endl;
+	cout << "WrongDog constructer Worked" << endl;
 }
 
 WrongDog::WrongDog(const WrongDog& oth)

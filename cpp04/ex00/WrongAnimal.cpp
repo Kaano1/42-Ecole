@@ -3,7 +3,7 @@
 WrongAnimal::WrongAnimal()
 {
 	type = "Animal";
-	cout << "Animal worked" << endl;
+	cout << "Animal Worked" << endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& oth)

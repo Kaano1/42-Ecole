@@ -6,7 +6,7 @@ ClapTrap::ClapTrap()
 	Hit = 10;
 	damage = 0;
 	Energy = 10;
-	cout << "ClapTrap worked" << endl;
+	cout << "ClapTrap Worked" << endl;
 }
 
 ClapTrap::ClapTrap(const string nick)
@@ -15,7 +15,7 @@ ClapTrap::ClapTrap(const string nick)
 	Hit = 10;
 	damage = 0;
 	Energy = 10;
-	cout << "ClapTrap worked" << endl;
+	cout << "ClapTrap Worked" << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& oth)
@@ -23,12 +23,12 @@ ClapTrap::ClapTrap(const ClapTrap& oth)
 	Hit = oth.Hit;
 	damage = oth.damage;
 	Energy = oth.Energy;
-	cout << "Copy ClapTrap worked" << endl;
+	cout << "Copy ClapTrap Worked" << endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	cout << "deconstructer called" << endl;
+	cout << "ClapTrap Destructor Worked" << endl;
 }
 
 void	ClapTrap::attack(const string& target)
@@ -61,9 +61,12 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (Hit <= 0 || Energy <= 0)
 		cout << "Already " << name << " died" << endl;
-   Energy -= 1;
-   Hit += amount;
-   cout << name << "repaired himself " << amount << " current life is " << Hit << endl;
+	else
+	{
+		Energy -= 1;
+		Hit += amount;
+		cout << name << "repaired himself " << amount << " current life is " << Hit << endl;
+	}
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& oth)
@@ -71,5 +74,6 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& oth)
 	Hit = oth.Hit;
 	damage = oth.damage;
 	Energy = oth.Energy;
+	cout << "ClapTrap Copy assigment Worked" << endl;
 	return (*this);
 }
