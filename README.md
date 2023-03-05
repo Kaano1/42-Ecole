@@ -3,7 +3,7 @@
 Assignment name  : microshell <br />
 Expected files   : *.c *.h <br />
 Allowed functions: malloc, free, write, close, fork, waitpid, signal, kill, exit, chdir, execve, dup, dup2, pipe, strcmp, strncmp <br />
----------------------------------------------------------------------------------------------------------------------------------------------- <br /> <br />
+---------------------------------------------------------------------------------------------------------------- <br /> <br />
 
 
 
