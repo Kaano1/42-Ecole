@@ -8,7 +8,7 @@ Brain::Brain()
 Brain::Brain(const Brain& oth)
 {
 	*this = oth;
-	cout << "Brain copy Worked" << endl;
+	cout << "Brain copy constructor Worked" << endl;
 }
 
 Brain::~Brain()

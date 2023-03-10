@@ -9,7 +9,7 @@ Dog::Dog()
 Dog::Dog(const Dog& oth)
 {
 	*this = oth;
-	cout << "Dog constuctor worked" << endl;
+	cout << "Dog copy constuctor worked" << endl;
 }
 
 Dog::~Dog()

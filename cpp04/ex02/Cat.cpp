@@ -10,6 +10,7 @@ Cat::Cat()
 Cat::Cat(const Cat& oth)
 {
 	*this = oth;
+	cout << "Cat copy constructor worked" << endl;
 }
 
 Cat::~Cat()
@@ -28,5 +29,5 @@ Cat	&Cat::operator=(const Cat& oth)
 
 void Cat::makeSound() const
 {
-	cout << "The Cat sound" << endl;
+	cout << "Meow" << endl;
 }

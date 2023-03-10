@@ -10,6 +10,7 @@ Dog::Dog()
 Dog::Dog(const Dog& oth)
 {
 	*this = oth;
+	cout << "Dog copy constructor worked" << endl;
 }
 
 Dog::~Dog()
@@ -28,5 +29,5 @@ Dog	&Dog::operator=(const Dog& oth)
 
 void Dog::makeSound() const
 {
-	cout << "The Dog sound" << endl;
+	cout << "Bark" << endl;
 }

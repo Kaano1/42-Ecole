@@ -9,7 +9,7 @@ Animal::Animal()
 Animal::Animal(const Animal& oth)
 {
 	*this = oth;
-	cout << "Animal constructor worked" << endl;
+	cout << "Animal copy constructor worked" << endl;
 }
 
 Animal::~Animal()
