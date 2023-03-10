@@ -6,11 +6,6 @@ Cat::Cat()
 	cout << "Cat Worked" << endl;
 }
 
-Cat::Cat(const Cat& oth)
-{
-	*this = oth;
-}
-
 Cat::~Cat()
 {
 	cout << "Cat Destroyed" << endl;

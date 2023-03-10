@@ -6,11 +6,6 @@ WrongCat::WrongCat()
 	cout << "WrongCat Worked" << endl;
 }
 
-WrongCat::WrongCat(const WrongCat& oth)
-{
-	*this = oth;
-}
-
 WrongCat::~WrongCat()
 {
 	cout << "WrongCat Destroyed" << endl;
