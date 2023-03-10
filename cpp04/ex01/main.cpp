@@ -1,11 +1,13 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main() 
 {
-	Animal	*kevser[8];
-	int		max = 8;
+	Animal	*kevser[4];
+	int		max = 4;
 	int		i;
 
 	i = 0;
@@ -17,7 +19,7 @@ int main()
 			kevser[i] = new Cat();
 		i++;
 	}
-	
+
 	i = 0;
 	while(i < max)
 	{

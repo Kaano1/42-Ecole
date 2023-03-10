@@ -22,7 +22,7 @@ Brain&	Brain::operator=(const Brain& oth)
 
 	i = -1;
 	while (++i < 100)
-		 this->ideas[i] = oth.ideas[i];
+			this->ideas[i] = oth.ideas[i];
 	cout << "Brain copy assigment operator called" << endl;
 	return (*this);
 }

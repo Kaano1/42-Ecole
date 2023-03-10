@@ -9,7 +9,10 @@ Dog::Dog()
 
 Dog::Dog(const Dog& oth)
 {
-	*this = oth;
+	this->type = oth.type;
+	beg = new Brain();
+	*(beg) = *(oth.beg);
+	cout << "Dog copy constructor worked" << endl;
 }
 
 Dog::~Dog()
@@ -18,13 +21,15 @@ Dog::~Dog()
 	delete beg;
 }
 
-void	Dog::operator=(const Dog& oth)
+Dog	&Dog::operator=(const Dog& oth)
 {
 	type = oth.type;
+	beg = oth.beg;
 	cout << "Dog copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Dog::makeSound() const
 {
-	cout << "The Dog sound" << endl;
+	cout << "Bark" << endl;
 }

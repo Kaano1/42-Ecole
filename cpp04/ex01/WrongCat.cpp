@@ -2,13 +2,14 @@
 
 WrongCat::WrongCat()
 {
-	type = "Cat";
+	type = "WrongCat";
 	cout << "WrongCat Worked" << endl;
 }
 
 WrongCat::WrongCat(const WrongCat& oth)
 {
 	*this = oth;
+	cout << "WrongCat copy constructor worked" << endl;
 }
 
 WrongCat::~WrongCat()
@@ -16,13 +17,14 @@ WrongCat::~WrongCat()
 	cout << "WrongCat Destroyed" << endl;
 }
 
-void	WrongCat::operator=(const WrongCat& oth)
+WrongCat	&WrongCat::operator=(const WrongCat& oth)
 {
 	type = oth.type;
 	cout << "WrongCat copy assigment operator called" << endl;
+	return (*this);
 }
 
 void WrongCat::makeSound() const
 {
-	cout << "The WrongCat sound" << endl;
+	cout << "Meow" << endl;
 }

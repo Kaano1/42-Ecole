@@ -6,16 +6,11 @@ Dog::Dog()
 	cout << "Dog constructer Worked" << endl;
 }
 
-
-
 Dog::Dog(const Dog& oth)
 {
 	*this = oth;
-	(void)oth;
-	cout << "Dog Copy Constructer Worked" << endl;
+	cout << "Dog constuctor worked" << endl;
 }
-
-
 
 Dog::~Dog()
 {
@@ -24,12 +19,12 @@ Dog::~Dog()
 
 Dog	&Dog::operator=(const Dog& oth)
 {
-	this->type = oth.type;
+	type = oth.type;
 	cout << "Dog copy assigment operator called" << endl;
 	return (*this);
 }
 
 void Dog::makeSound() const
 {
-	cout << "The Dog sound" << endl;
+	cout << "Bark" << endl;
 }

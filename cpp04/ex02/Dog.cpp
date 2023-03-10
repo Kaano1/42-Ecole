@@ -18,10 +18,12 @@ Dog::~Dog()
 	delete beg;
 }
 
-void	Dog::operator=(const Dog& oth)
+Dog	&Dog::operator=(const Dog& oth)
 {
 	type = oth.type;
+	beg = oth.beg;
 	cout << "Dog copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Dog::makeSound() const

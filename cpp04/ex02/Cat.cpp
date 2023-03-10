@@ -18,10 +18,12 @@ Cat::~Cat()
 	delete beg;
 }
 
-void	Cat::operator=(const Cat& oth)
+Cat	&Cat::operator=(const Cat& oth)
 {
 	type = oth.type;
+	*this->beg = *oth.beg;
 	cout << "Cat copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Cat::makeSound() const

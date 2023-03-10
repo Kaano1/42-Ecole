@@ -9,6 +9,7 @@ Animal::Animal()
 Animal::Animal(const Animal& oth)
 {
 	*this = oth;
+	cout << "Animal copy constructor worked" << endl;
 }
 
 Animal::~Animal()
@@ -16,10 +17,11 @@ Animal::~Animal()
 	cout << "Animal Destroyed" << endl;
 }
 
-void	Animal::operator=(const Animal& oth)
+Animal	&Animal::operator=(const Animal& oth)
 {
 	type = oth.type;
 	cout << "Animal copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Animal::makeSound() const

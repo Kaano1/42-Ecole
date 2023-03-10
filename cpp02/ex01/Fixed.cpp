@@ -53,7 +53,6 @@ float Fixed::toFloat(void) const
 	return ((float)fixnum / (1 << num_bits));
 }
 
-
 int Fixed::toInt(void) const
 {
 	return(fixnum >> num_bits);

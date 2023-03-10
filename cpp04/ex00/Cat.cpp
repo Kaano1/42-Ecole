@@ -6,18 +6,25 @@ Cat::Cat()
 	cout << "Cat Worked" << endl;
 }
 
+Cat::Cat(const Cat& oth)
+{
+	*this = oth;
+	cout << "Cat copy constuctor worked" << endl;
+}
+
 Cat::~Cat()
 {
 	cout << "Cat Destroyed" << endl;
 }
 
-void	Cat::operator=(const Cat& oth)
+Cat	&Cat::operator=(const Cat& oth)
 {
 	type = oth.type;
 	cout << "Cat copy assigment operator called" << endl;
+	return (*this);
 }
 
 void Cat::makeSound() const
 {
-	cout << "The Cat sound" << endl;
+	cout << "Meow" << endl;
 }

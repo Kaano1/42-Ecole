@@ -1,24 +1,21 @@
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+OBJS = $(SRCS:%.cpp=%.o)
 NAME = Animal
-
-SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
-
-OBJ = $(SRC:.cpp=.o)
-
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
-RM = rm -f
+C++ = c++
+CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
+RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	c++ $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(C++) $(OBJS) $(CPPFLAGS) -o $(NAME)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean all

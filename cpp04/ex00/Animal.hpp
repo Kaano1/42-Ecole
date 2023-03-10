@@ -13,7 +13,7 @@ class Animal
 		string type;
 	public:
 		Animal();
-		Animal(const Animal& oth);
+		Animal(const Animal&oth);
 		virtual ~Animal();
 		Animal	&operator=(const Animal& oth);
 		virtual void makeSound() const;
