@@ -20,8 +20,6 @@ t_map design_map(char *filename)
 
 }
 
-
-
 int check_characters(t_data *data)
 {
 	int		i;

@@ -14,14 +14,26 @@
 # include <ft_printf.h>
 # include <get_next_line.h>
 
+typedef struct s_image
+{
+    int		width;
+    int		height;
+    void	*img;
+} t_image;
+
 typedef struct s_map
 {
+    char *so;
+    char *no;
+    char *we;
+    char *ea;
     char **map;
 } t_map;
 
 typedef struct s_data
 {
-    t_map			**map;
-}t_data;
+    t_map   *map;
+    t_image game_img;
+} t_data;
 
 #endif
