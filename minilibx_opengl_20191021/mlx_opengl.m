@@ -15,10 +15,10 @@
 
 NSOpenGLPixelFormatAttribute pfa_attrs_opengl[] =
   {
-    NSOpenGLPFADepthSize, 32,
-    NSOpenGLPFADoubleBuffer,
-    NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersion4_1Core,
-    0
+	NSOpenGLPFADepthSize, 32,
+	NSOpenGLPFADoubleBuffer,
+	NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersion4_1Core,
+	0
   };
 
 
@@ -29,7 +29,7 @@ void	*mlx_new_opengl_window(mlx_ptr_t *mlx_ptr, int size_x, int size_y, char *ti
   NSString		*str;
 
   if ((newwin = malloc(sizeof(*newwin))) == NULL)
-    return ((void *)0);
+	return ((void *)0);
   newwin->img_list = NULL;
   newwin->next = mlx_ptr->win_list;
   newwin->nb_flush = 0;
