@@ -14,7 +14,9 @@ t_map design_map(char *filename)
 		ft_putstr_fd("Error\nFolder Error\n", 2);
 		exit(1);
 	}
-	line = get_next_line(fd);
+	i = get_line(&line, fd, 1);
+	if (i < 0)
+		return (0);
 	return (a);
 }
 
