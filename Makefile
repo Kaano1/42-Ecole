@@ -2,20 +2,28 @@ SRCS = main.c check_map.c
 
 OBJS = $(SRCS:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+CC = gcc
+
+FLAGS = #-Wall -Wextra -Werror
 
 NAME = GAME
+
+MANAGE = manage.a
 
 RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): first $(OBJS)
+	$(CC) $(OBJS) $(MANAGE) -o $(NAME)
 	
+
+first:
+	make -C ./help
 
 clean:
 	$(RM) $(OBJS)
-	make clean -C ./help
+	make fclean -C ./help
 
 fclean: clean
 	$(RM) $(NAME)

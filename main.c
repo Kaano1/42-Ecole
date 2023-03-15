@@ -3,7 +3,7 @@
 int main(int ac, char **av)
 {
     t_data data;
-    if(ac == 2 && !ft_strncmp(&argv[1][ft_strlen(argv[1]) - 4], ".cub", 5))
+    if(ac == 2 && !ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 5))
     {
         
     }

@@ -9,10 +9,9 @@
 # include <fcntl.h>
 # include <sys/wait.h>
 # include <math.h>
-# include <../lib/minilibx/mlx.h>
-# include <libft.h>
-# include <ft_printf.h>
-# include <get_next_line.h>
+# include "./help/libft/libft.h"
+# include "./help/ft_printf/ft_printf.h"
+# include "./help/gnl/get_next_line.h"
 
 typedef struct s_image
 {

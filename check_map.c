@@ -1,7 +1,8 @@
-#include <cub3d.h>
+#include "cub3d.h"
 
 t_map design_map(char *filename)
 {
+	t_map a;
     int		fd;
 	char	*line;
 	int		i;
@@ -15,8 +16,7 @@ t_map design_map(char *filename)
     }
     line = get_next_line(fd);
     
-		
-
+	return (a);
 
 }
 
@@ -27,6 +27,7 @@ int check_characters(t_data *data)
     int     a;
 
 	i = -1;
+	/*
 	while (++i < data->map[i])
 	{
 		j = -1;
@@ -41,6 +42,6 @@ int check_characters(t_data *data)
 		}
         if(a != 1)
             ft_putstr_fd("Error\nMore than one char\n", 2);
-    }
+    }*/
 }
 
