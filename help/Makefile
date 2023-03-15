@@ -14,6 +14,10 @@ SRCS = $(addprefix ./libft/, $(LIBFT)) $(addprefix ./gnl/, $(GNL)) $(addprefix .
 
 OBJS			= $(SRCS:.c=.o)
 
+CC = gcc
+
+CFLAGS			= -Wall -Wextra -Werror -I.
+
 NAME			= ../manage.a
 
 all:			$(NAME)

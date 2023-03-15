@@ -1,13 +1,6 @@
 #include "cub3d.h"
 
-void	ft_putstr_fd(char *str, int fd)
-{
-	int i;
-
-	i = -1;
-	while (str[++i])
-		write(fd, str[i], 1);
-}
+#include <stdio.h>
 
 int	main(int ac, char **av)
 {
@@ -21,5 +14,5 @@ int	main(int ac, char **av)
 		//aynı zaman freelme işlemleri olacak ve exit komutu ile sonlandırılacak.
 	}
 	else
-		 ft_putstr_fd("Error\nArgument Error\n", 2);
+		ft_putstr_fd("Error\nArgument Error\n", 2);
 }

@@ -2,7 +2,7 @@
 
 t_map design_map(char *filename)
 {
-	t_map a;
+	t_map	a;
 	int		fd;
 	char	*line;
 	int		i;
@@ -11,7 +11,7 @@ t_map design_map(char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
 	{
-		 ft_putstr_fd("Error\nFolder Error\n", 2);
+		ft_putstr_fd("Error\nFolder Error\n", 2);
 		exit(1);
 	}
 	line = get_next_line(fd);
@@ -20,17 +20,18 @@ t_map design_map(char *filename)
 
 int check_characters(t_data *data)
 {
+	t_map	**map;
 	int		i;
 	int		j;
-	int	 a;
+	int		a;
 
-	i = -1;
-	/*
-	while (++i < data->map[i])
+	i = -1;/*
+	while (data->map[++i])
 	{
 		j = -1;
-		 a = 0;
-		while (map[i][++j])
+		a = 0;
+		map = data->map;
+		while (!(map[i][++j]))
 		{
 			if (!ft_strchr("01NSEW", map[i][j]))
 				ft_putstr_fd("Error\nInvalid Character\n", 2);
