@@ -2,31 +2,29 @@
 
 WrongAnimal::WrongAnimal()
 {
-	type = "WrongAnimal";
-	cout << "WrongAnimal Worked" << endl;
+	type = "Animal";
+	cout << "Animal worked" << endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& oth)
 {
 	*this = oth;
-	cout << "WrongAnimal copy constructor worked" << endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	cout << "WrongAnimal Destroyed" << endl;
+	cout << "Animal Destroyed" << endl;
 }
 
-WrongAnimal	&WrongAnimal::operator=(const WrongAnimal& oth)
+void	WrongAnimal::operator=(const WrongAnimal& oth)
 {
 	type = oth.type;
-	cout << "WrongAnimal copy assigment operator called" << endl;
-	return (*this);
+	cout << "Animal copy assigment operator called" << endl;
 }
 
 void WrongAnimal::makeSound() const
 {
-	cout << "WrongThe Animal sound" << endl;
+	cout << "The Animal sound" << endl;
 }
 
 string	WrongAnimal::getType() const { return (type); }

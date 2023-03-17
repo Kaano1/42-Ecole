@@ -1,4 +1,4 @@
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 NAME = Animal
 C++ = c++
@@ -8,7 +8,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(C++) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(C++) $(CPPFLAGS) $(SRCS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
@@ -18,4 +18,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all

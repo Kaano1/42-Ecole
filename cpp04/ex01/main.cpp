@@ -1,36 +1,27 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
-int main() 
+int main()
 {
-	Animal	*kevser[4];
-	int		max = 4;
-	int		i;
+	Animal* animals[6];
 
-	i = 0;
-	while (i < max)
+	for (int i = 0; i < 3; ++i)
 	{
-		if (i < (2 / max))
-			kevser[i] = new Dog();
-		else
-			kevser[i] = new Cat();
-		i++;
+		std::cout << "dog: " << i << std::endl;
+		animals[i] = new Dog();
 	}
-
-	i = 0;
-	while(i < max)
+	for (int i = 3; i < 6; ++i)
 	{
-		kevser[i]->makeSound();
-		i++;
+		std::cout << "cat: " << i << std::endl;
+		animals[i] = new Cat();
 	}
-	i = 0;
-	while(i < max)
+	for (int i = 0; i < 6; ++i)
 	{
-		delete kevser[i];
-		i++;
+		std::cout << "destruct: " << i << std::endl;
+		delete animals[i];
 	}
+	return (0);
 }
+
 

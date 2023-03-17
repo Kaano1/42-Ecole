@@ -3,16 +3,13 @@
 Cat::Cat()
 {
 	type = "Cat";
-	cout << "Cat Worked" << endl;
+	cout << "Cat worked" << endl;
 	beg = new Brain();
 }
 
 Cat::Cat(const Cat& oth)
 {
-	this->type = oth.type;
-	beg = new Brain();
-	*(beg) = *(oth.beg);
-	cout << "Cat copy constructor worked" << endl;
+	*this = oth;
 }
 
 Cat::~Cat()
@@ -21,15 +18,13 @@ Cat::~Cat()
 	delete beg;
 }
 
-Cat	&Cat::operator=(const Cat& oth)
+void	Cat::operator=(const Cat& oth)
 {
 	type = oth.type;
-	*this->beg = *oth.beg;
 	cout << "Cat copy assigment operator called" << endl;
-	return (*this);
 }
 
 void Cat::makeSound() const
 {
-	cout << "Meow" << endl;
+	cout << "The Cat sound" << endl;
 }
