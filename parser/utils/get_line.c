@@ -20,7 +20,11 @@ int	get_line(char **line, int fd, int key)
 	end_i = ft_strlen(str) - 1;
 	while (is_space(str[end_i]))
 		end_i--;
-	*line = ft_substr(str, i, end_i);
+	*line = ft_substr(str, i, end_i + 1);		
+	if (i == ft_strlen(str))
+		i = 42;
+	else
+		i = 1;
 	free(str);
-	return (1);
+	return (i);
 }

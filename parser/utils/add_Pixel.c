@@ -11,7 +11,7 @@ int	difChar(char **sp_pix)
 		j = 0;
 		while (sp_pix[i][j])
 		{
-			if (!ft_isdigit(sp_pix[i][j]) && !is_space(sp_pix[i][j]) && sp_pix[i][j] != ',')
+			if (!ft_isdigit(sp_pix[i][j]) && !is_space(sp_pix[i][j]))
 				return (1);
 			j++;
 		}
@@ -20,19 +20,20 @@ int	difChar(char **sp_pix)
 	return (0);
 }
 
-t_pixel	add_Pixel(char *line, t_map *data)
+t_pixel	add_Pixel(char *line, t_map *data, int sta)
 {
 	t_pixel	pix;
 	int		i;
 	char	**sp_pix;
 
 	i = 0;
+	pix.sta = sta;
 	sp_pix = ft_split(line, ',');
 	while (sp_pix[i])
 		i++;
 	if (i == 3)
 	{
-		if (difChar(sp_pix))
+		if (difChar(sp_pix) || sta > 0)
 		{
 			free(line);
 			freeArray(sp_pix);
@@ -41,6 +42,7 @@ t_pixel	add_Pixel(char *line, t_map *data)
 		pix.r = ft_atoi(sp_pix[0]);
 		pix.g = ft_atoi(sp_pix[1]);
 		pix.b = ft_atoi(sp_pix[2]);
+		pix.sta++;
 	}
 	if ((!(pix.r <= 255 && pix.r >= 0)) || (!(pix.g <= 255 && pix.g >= 0)) 
 		|| (!(pix.b <= 255 && pix.b >= 0)))
