@@ -60,6 +60,7 @@ typedef struct s_map
 	int		x;
 	int		y;
 	float	ang;
+	int		many_line;
 	t_pixel	f;
 	t_pixel	c;
 }	t_map;

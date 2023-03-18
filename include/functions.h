@@ -6,10 +6,11 @@
 //parser
 char	*add_NSWE(char *line, t_map *map);
 t_pixel	add_Pixel(char *line, t_map *data, int sta);
+int		add_map(int fd, t_map *map);
 int		get_line(char **line, int fd, int key);
 int		check_characters(t_data *data);
 t_map	*arrange_tMap(char *file);
-t_map	*design_map(int fd, t_map *map);
+t_map	*design_map(int fd, t_map *map, int i);
 
 //utils
 void	clear_map_exit(t_map *data, char *str);

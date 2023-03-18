@@ -1,9 +1,30 @@
 #include "../include/cub3d.h"
 
-void	Vazero(t_map *map)
+int	many_line(int fd)
 {
+	int	i;
+	char	*line;
+
+	i = 1;
+	line = get_next_line(fd);
+	while (line)
+	{
+		i++;
+		free(line);
+		line = get_next_line(fd);
+	}
+	free(line);
+	return (i);
+}
+
+void	Vazero(char *file, t_map *map)
+{
+	int	fd;
+
+	fd = open(file, O_RDONLY);
 	map->f.sta = 0;
 	map->c.sta = 0;
+	map->many_line = many_line(fd);
 }
 
 t_map	*arrange_tMap(char *file)
@@ -18,6 +39,10 @@ t_map	*arrange_tMap(char *file)
 		exit(1);
 	}
 	map = ft_calloc(sizeof(t_map), 1);
-	Vazero(map);
-	map = design_map(fd, map);
+	Vazero(file, map);
+	map = design_map(fd, map, 0);
+	if (add_map(fd, map))
+	{
+		//freeleme yapmayı planlıyoruz
+	}
 }

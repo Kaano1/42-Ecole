@@ -6,7 +6,6 @@ int	get_line(char **line, int fd, int key)
 	int		end_i;
 	int		i;
 
-	i = 0;
 	str = get_next_line(fd);
 	if (!str)
 		return (-1);
@@ -15,6 +14,7 @@ int	get_line(char **line, int fd, int key)
 		*line = str;
 		return (1);
 	}
+	i = 0;
 	while (is_space(str[i]))
 		i++;
 	end_i = ft_strlen(str) - 1;
