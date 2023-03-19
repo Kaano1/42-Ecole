@@ -47,6 +47,8 @@ t_map	*arrange_tMap(char *file)
 		close(fd);
 		clear_map_exit(map, ERROR_TAB);
 	}
+	check_characters(map);
+	check_wall(map);
 	if (map)
 		get_position(map);
 }
