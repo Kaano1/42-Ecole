@@ -6,7 +6,7 @@ char	*start_read(int fd)
 
 	while (get_line(&line, fd, 0) != -1)
 	{
-		if (!ft_strncmp(line, "1", ft_strlen(line)))
+		if (ft_strrchr(line, '1'))
 			return (line);
 		free(line);
 	}
@@ -26,11 +26,13 @@ int	add_map(int fd, t_map *map)
 	while (i < map->many_line)
 	{
 		map->map[i] = line;
-		free(line);
 		line = get_next_line(fd);
 		i++;
 	}
 	if (line)
 		free(line);
+	i = 0;
+	while (i < map->many_line)
+		printf("%s", map->map[i++]);
 	return (0);
 }
