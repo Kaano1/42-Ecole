@@ -25,12 +25,13 @@ void	Vazero(char *file, t_map *map)
 	map->f.sta = 0;
 	map->c.sta = 0;
 	map->many_line = many_line(fd);
+	close(fd);
 }
 
 t_map	*arrange_tMap(char *file)
 {
 	t_map	*map;
-	int	fd;
+	int		fd;
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
@@ -43,6 +44,9 @@ t_map	*arrange_tMap(char *file)
 	map = design_map(fd, map, 0);
 	if (add_map(fd, map))
 	{
-		//freeleme yapmayı planlıyoruz
+		close(fd);
+		clear_map_exit(map, ERROR_TAB);
 	}
+	if (map)
+		get_position(map);
 }

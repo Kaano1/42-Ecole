@@ -9,6 +9,7 @@ t_pixel	add_Pixel(char *line, t_map *data, int sta);
 int		add_map(int fd, t_map *map);
 int		get_line(char **line, int fd, int key);
 int		check_characters(t_data *data);
+void	get_position(t_map *map);
 t_map	*arrange_tMap(char *file);
 t_map	*design_map(int fd, t_map *map, int i);
 

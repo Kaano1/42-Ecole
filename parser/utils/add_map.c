@@ -26,13 +26,12 @@ int	add_map(int fd, t_map *map)
 	while (i < map->many_line)
 	{
 		map->map[i] = line;
+		if (line != NULL && ft_strchr(line, '\t'))
+			return (1);
 		line = get_next_line(fd);
 		i++;
 	}
 	if (line)
 		free(line);
-	i = 0;
-	while (i < map->many_line)
-		printf("%s", map->map[i++]);
 	return (0);
 }

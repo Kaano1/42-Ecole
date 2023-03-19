@@ -1,9 +1,10 @@
 #include "../include/cub3d.h"
 
-int	design_map_continue(int i, char **line, t_map **map)
+int	design_map_continue(int i, char **line, t_map **map, int fd)
 {
 	if (i != 42 && line != NULL)
 	{
+		close(fd);
 		free(line);
 		clear_map_exit(*map, ERROR_MAP);
 	}
@@ -31,7 +32,7 @@ t_map	*design_map(int fd, t_map *map, int i)
 		else if (i != -1 && !ft_strncmp(line, "C ", 2))
 			map->c = add_Pixel((line + 2), map, map->c.sta);
 		else
-			design_map_continue(i, &line, &map);
+			design_map_continue(i, &line, &map, fd);
 		map->many_line--;
 		free(line);
 	}
