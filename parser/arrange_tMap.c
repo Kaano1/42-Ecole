@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arrange_tMap.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/20 18:48:45 by ayumusak          #+#    #+#             */
+/*   Updated: 2023/03/20 18:48:45 by ayumusak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/cub3d.h"
 
 int	many_line(int fd)
 {
-	int	i;
+	int		i;
 	char	*line;
 
 	i = 1;
@@ -36,7 +48,7 @@ t_map	*arrange_tMap(char *file)
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
 	{
-		ft_putstr_fd("Error\nFolder Error\n", 2);
+		ft_putstr_fd(ERROR_FD, 2);
 		exit(1);
 	}
 	map = ft_calloc(sizeof(t_map), 1);
@@ -51,4 +63,5 @@ t_map	*arrange_tMap(char *file)
 	check_wall(map);
 	if (map)
 		get_position(map);
+	return (map);
 }

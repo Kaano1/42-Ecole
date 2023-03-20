@@ -1,6 +1,6 @@
 SRCS = main.c \
-	utils/is_space.c utils/clear_map_exit.c  utils/freeArray.c \
-	parser/utils/add_Pixel.c parser/utils/add_NSWE.c parser/utils/get_line.c parser/utils/add_map.c \
+	utils/is_space.c utils/clear_map_exit.c  utils/free_array.c \
+	parser/utils/add_pix.c parser/utils/add_NSWE.c parser/utils/get_line.c parser/utils/add_map.c \
 	parser/utils/get_position.c \
 	parser/design_map.c parser/check_characters.c parser/arrange_tMap.c
 

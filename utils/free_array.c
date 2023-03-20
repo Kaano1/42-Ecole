@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_space.c                                         :+:      :+:    :+:   */
+/*   free_array.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:57:12 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/03/20 18:57:12 by ayumusak         ###   ########.fr       */
+/*   Created: 2023/03/20 19:17:31 by ayumusak          #+#    #+#             */
+/*   Updated: 2023/03/20 19:17:31 by ayumusak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
 
-int	is_space(char c)
+void	free_array(char **str)
 {
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
 }

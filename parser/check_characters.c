@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_characters.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/20 18:50:49 by ayumusak          #+#    #+#             */
+/*   Updated: 2023/03/20 18:50:49 by ayumusak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/cub3d.h"
 
 void	ft_putstr_fd_err(char *s, int fd)
@@ -26,21 +38,18 @@ int	check_characters(t_map *data)
 		j = -1;
 		while (data->map[i][++j])
 		{
-			if (!is_space(data->map[i][j]) && !ft_strchr("01NSEW", data->map[i][j]))
-			{
-				printf("(%d)---%d/%d\n", data->map[i][j], i, j);
-				ft_putstr_fd_err("Error\nInvalid Character\n", 2);
-			}
+			if ((!is_space(data->map[i][j])) &&
+				(!ft_strchr("01NSEW", data->map[i][j])))
+				clear_map_exit(data, ERROR_VAL);
 			else if (data->map[i][j] == 'N' || data->map[i][j] == 'S' || \
 				data->map[i][j] == 'W' || data->map[i][j] == 'E')
 				a++;
 		}
 	}
 	if (a != 1)
-			ft_putstr_fd_err("Error\nMore than one char\n", 2);
+		ft_putstr_fd_err("Error\nMore than one char\n", 2);
 	return (1);
 }
-
 
 int	check_wall(t_map *game)
 {
@@ -53,12 +62,12 @@ int	check_wall(t_map *game)
 		j = -1;
 		while (!(game->map[i][++j]))
 		{
-			if(game->map[i][++j] != 1)
+			if (game->map[i][++j] != 1)
 			{
-				if((game->map[i][j+ 1] == '\t') || (game->map[i][j + 1] == ' ') \
+				if ((game->map[i][j + 1] == '\t') || (game->map[i][j + 1] == ' ') \
 				||(game->map[i][j - 1] == '\t') || (game->map[i][j - 1] == ' ') \
 				||(game->map[i + 1][j] == '\t') || (game->map[i + 1][j] == ' ') \
-				||(game->map[i -1 ][j] == '\t') || (game->map[i -1][j] == ' '))
+				||(game->map[i - 1][j] == '\t') || (game->map[i - 1][j] == ' '))
 					ft_putstr_fd_err("WALL ERROR\n", 2);
 			}
 		}

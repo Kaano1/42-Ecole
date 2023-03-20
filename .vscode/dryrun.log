@@ -1,0 +1,19 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/ayumusak/Desktop/cub3D'
+make -C ./help
+ 
+gcc    -c -o main.o main.c
+gcc    -c -o utils/is_space.o utils/is_space.c
+gcc    -c -o utils/clear_map_exit.o utils/clear_map_exit.c
+gcc    -c -o utils/free_array.o utils/free_array.c
+gcc    -c -o parser/utils/add_pix.o parser/utils/add_pix.c
+gcc    -c -o parser/utils/add_NSWE.o parser/utils/add_NSWE.c
+gcc    -c -o parser/utils/get_line.o parser/utils/get_line.c
+gcc    -c -o parser/utils/add_map.o parser/utils/add_map.c
+gcc    -c -o parser/utils/get_position.o parser/utils/get_position.c
+gcc    -c -o parser/design_map.o parser/design_map.c
+gcc    -c -o parser/check_characters.o parser/check_characters.c
+gcc    -c -o parser/arrange_tMap.o parser/arrange_tMap.c
+gcc  main.o utils/is_space.o utils/clear_map_exit.o utils/free_array.o parser/utils/add_pix.o parser/utils/add_NSWE.o parser/utils/get_line.o parser/utils/add_map.o parser/utils/get_position.o parser/design_map.o parser/check_characters.o parser/arrange_tMap.o manage.a -o GAME
+make: Leaving directory `/Users/ayumusak/Desktop/cub3D'
+ 

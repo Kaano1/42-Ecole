@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_line.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/20 18:57:48 by ayumusak          #+#    #+#             */
+/*   Updated: 2023/03/20 18:57:48 by ayumusak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/cub3d.h"
 
 int	get_line(char **line, int fd, int key)
@@ -20,7 +32,7 @@ int	get_line(char **line, int fd, int key)
 	end_i = ft_strlen(str) - 1;
 	while (is_space(str[end_i]))
 		end_i--;
-	*line = ft_substr(str, i, end_i + 1);		
+	*line = ft_substr(str, i, end_i + 1);
 	if (i == ft_strlen(str))
 		i = 42;
 	else
