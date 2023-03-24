@@ -8,8 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Mon Mar 20 19:17:02 2023
- 
+# Make data base, printed on Mon Mar 20 23:18:35 2023
 
 # Variables
 
@@ -42,13 +41,13 @@ OBJS = $(SRCS:.c=.o)
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HTM6etaznU/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1ElrqiGDpa/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -114,7 +113,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2144
+XPC_SERVICE_NAME = com.microsoft.VSCode.1248
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -138,7 +137,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 81906
+VSCODE_PID = 14826
 # variable set hash-table stats:
 # Load=63/1024=6%, Rehash=0, Collisions=3/93=3%
 
@@ -148,9 +147,9 @@ VSCODE_PID = 81906
 
 # Directories
 
-# . (device 16777225, inode 2313264): 11 files, no impossibilities.
+# . (device 16777225, inode 2313264): 13 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -308,13 +307,13 @@ re: fclean all
 #  File has not been updated.
 
 clean:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 29):
 	$(RM) $(OBJS)
- 
 	make fclean -C ./help
 	
 
@@ -343,6 +342,6 @@ parser/utils/get_line.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Mar 20 19:17:02 2023
+# Finished Make data base on Mon Mar 20 23:18:35 2023
 
  

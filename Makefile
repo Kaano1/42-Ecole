@@ -8,7 +8,7 @@ OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-CFLAGS = #-Wall -Wextra -Werror
+CFLAGS = -g #-Wall -Wextra -Werror
 
 NAME = GAME
 

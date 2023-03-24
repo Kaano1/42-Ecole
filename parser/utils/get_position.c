@@ -35,6 +35,8 @@ void	get_position(t_map *data)
 				data->x = k;
 				return ;
 			}
+			else if (data->map[i][k] == '2')
+				data->map[i][k] = '1';
 		}
 	}
 }

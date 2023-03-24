@@ -21,7 +21,7 @@ t_pixel	add_pix(char *line, t_map *data, int sta, int i);
 int		add_map(int fd, t_map *map);
 int		get_line(char **line, int fd, int key);
 int		check_characters(t_map *data);
-int		check_wall(t_map *game);
+int		check_wall(char **map, int y, int x);
 void	ft_putstr_fd_err(char *s, int fd);
 void	get_position(t_map *map);
 t_map	*arrange_tMap(char *file);
