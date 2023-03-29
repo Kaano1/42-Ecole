@@ -71,6 +71,7 @@ typedef struct s_map
 	char	*we;
 	int		x;
 	int		y;
+	int		line_max;
 	float	ang;
 	int		many_line;
 	t_pixel	f;

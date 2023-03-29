@@ -26,6 +26,7 @@ void	ft_putstr_fd_err(char *s, int fd);
 void	get_position(t_map *map);
 t_map	*arrange_tMap(char *file);
 t_map	*design_map(int fd, t_map *map, int i);
+void	get_data(t_data *data, t_map *map);
 
 //utils
 void	clear_map_exit(t_map *data, char *str);

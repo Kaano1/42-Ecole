@@ -51,33 +51,6 @@ int	check_characters(t_map *data)
 	return (0);
 }
 
-void	recursive_check(char **map, int y, int x, int key, int *rs)
-{
-	static int _x;
-	static int _y;
-
-	map[y][x] = '2';
-	if (key == 1)
-	{
-		_x = x;
-		_y = y;
-		map[y][x] = '1';
-	}
-	if (map[y][x + 1] == '1')
-		recursive_check(map, y, x + 1, key + 1, rs);
-	if (y != 0 && map[y][x - 1] == '1')
-		recursive_check(map, y, x - 1, key + 1, rs);
-	if (key != 1 && map[y + 1] != 0 && map[y + 1][x] == '1')
-		recursive_check(map, y + 1, x, key + 1, rs);
-	if (y != 0 && map[y - 1][x] == '1')
-		recursive_check(map, y - 1, x, key + 1, rs);
-	if (key != 1 && _x == x && _y == y)
-	{
-		*rs = 1;
-		return ;
-	}
-}
-
 void	printMap(char **map)
 {
 	int	i = 0;
@@ -86,6 +59,7 @@ void	printMap(char **map)
 	while (map[j])
 	{
 		i = 0;
+		printf("%d.", j);
 		while (map[j][i])
 		{
 			printf("%c", map[j][i]);
@@ -93,23 +67,105 @@ void	printMap(char **map)
 		}
 		j++;
 	}
+	printf("\n");
+}
+//0 ların 4 tarafına bakabiliriz ardından 0 ların içerisinde flood_fill yapabiliriz ve içerisinde boşluk varsa açtırmayabiliriz.
+
+int	map_len(char **map)
+{
+	int	y;
+
+	y = 0;
+	while (map[y])
+		y++;
+	return (y);
 }
 
+int	condition(char **map, int y, int x)
+{
+	if (y == 0 || x == 0)
+		return (1);
+	if (x != 0 && is_space(map[y][x + 1]))
+		return (1);
+	else if (map[y][x + 1] == 0 || is_space(map[y][x + 1]))
+		return (1);
+	else if (!(y == 0 && x > ft_strlen(map[y - 1])) &&
+		(is_space(map[y + 1][x])))
+		return (1);
+	else if (!(y == map_len(map) && x > ft_strlen(map[y + 1])) &&
+			(is_space(map[y + 1][x])))
+		return (1);
+	return (0);
+}
+
+int	checking_zero(char **map, int y, int x)
+{
+	while (map[++y])
+	{
+		x = 0;
+		while (map[y][x])
+		{
+			if (map[y][x] == '0' && condition(map, y, x))
+			{
+				map[y][x] = 'X';
+				printMap(map);
+				printf("%c--%d--%d", map[y][x], y, x);
+				return (1);
+			}
+			x++;
+		}
+	}
+	return (0);
+}
+
+int	check_double_map(char **map, int y, int x)
+{
+	int	key;
+
+	key = 0;
+	while (map[y])
+	{
+		if (ft_strchr(" ", map[y][x]) && key == 0 &&
+			(!ft_strchr("01NSEW", map[y][x])))
+			key++;
+		else if ((!ft_strchr(" 01NSEW", map[y][x])) &&
+			key == 1)
+			return (1);
+		y++;
+	}
+	return (0);
+}
+
+//invalid texture,
 int	check_wall(char **map, int y, int x)
 {
-	int		result;
-
-	result = 0;
-	while (is_space(map[y][x]))
-		x++;
-	recursive_check(map, y, x, 1, &result);
-	if (result == 0)
-		return (1);
+	check_double_map(map, y, x);
+	checking_zero(map, y - 1, x);
+	while (map[y] != NULL)
+	{
+		x = 0;
+		while (map[y][x])
+		{
+			if (map[y][x] != '\n' && is_space(map[y][x]))
+				map[y][x] = '1';
+			x++;
+		}
+		y++;
+	}
 	printMap(map);
 	return (0);
 }
 
+//birebir aynı yada alt tarafın tamamıyla 1 olması durumunda
+//yukarının ince bir şekilde dizayn edilmesi gerekiyor.
 
+//çözüm:
+//duvarlar 2 ye çevrilir o sırada açıkta kalan 1 veya 0 olan bir değer
+//var mı diye kontrol
+//başta 0 var mı diye ön kontroller doğru yapacağız her zaman 
+//0 ıncı indexte olması imkansız ardından fazla olan 2 leri space
+//yapacak bir şey yapmamız gerekiyor.
+//sonrasında tekrar 1 e dönüştüreceğiz
 /*
 int	check_wall(t_map *game)
 {

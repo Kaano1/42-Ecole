@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:46:57 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/03/20 18:46:58 by ayumusak         ###   ########.fr       */
+/*   Updated: 2023/03/29 19:21:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@
 # include "functions.h"
 # include "macro.h"
 # include "all_structs.h"
+# include "../minilibx/mlx.h"
 
 #endif

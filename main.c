@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:44:05 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/03/24 22:44:56 by marvin           ###   ########.fr       */
+/*   Updated: 2023/03/29 19:23:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	main(int ac, char **av)
 			clear_map_exit(map, ERROR_MAP);
 		if (map)
 			get_position(map);
-		// gelen imagelerin kontolünü sağlamalıyız varlar mı yoklar mı diye check etmeliyiz mapimizi 
-		// renderlama ekranı yenileme işlemi yaparken herşeyi sildikten sonra yada başlarken başta ekranın yarı yarı boyuyoruz bize verilen renkler ile.
-		// notionda notlar.
-
-		// dosyanın içerisinde okuduğumuz veriye ek olarak hangi bilgileri tutmamız gerekiyor?
-		// matematik kısmındaki raycasting tam olarak nasıl bir işlem yapıyor?
+		get_data(&data, map);
+		exit (0);
+		data.mlx = mlx_init();
+		data.mlx_win = mlx_new_window(data.mlx, WIN_WIDTH, WIN_HEIGHT, "...");
+		//add
+		mlx_loop(data.mlx);
 	}
 	else
 		ft_putstr_fd("Error\nArgument Error\n", 2);

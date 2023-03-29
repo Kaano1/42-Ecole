@@ -12,13 +12,26 @@
 
 #include "../../include/cub3d.h"
 
+int	map_check_cub(char *str, int i)
+{
+	while (str[i])
+	{
+		if (str[i] != '1' && !is_space(str[i]) && str[i] != 0)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 char	*start_read(int fd)
 {
 	char	*line;
 
 	while (get_line(&line, fd, 0) != -1)
 	{
-		if (ft_strrchr(line, '1'))
+		if (!map_check_cub(line, 0))
+			return (NULL);
+		else if (ft_strchr(line, '1'))
 			return (line);
 		free(line);
 	}

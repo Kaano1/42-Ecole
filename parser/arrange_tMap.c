@@ -59,5 +59,6 @@ t_map	*arrange_tMap(char *file)
 		close(fd);
 		clear_map_exit(map, ERROR_TAB);
 	}
+	close(fd);
 	return (map);
 }
