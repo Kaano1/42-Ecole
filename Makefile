@@ -9,7 +9,7 @@ OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-FRAMEWORK = -lm -lXext -lX11
+FRAMEWORK = -framework OpenGL -framework AppKit
 
 CFLAGS = -g #-Wall -Wextra -Werror
 

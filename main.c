@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:44:05 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/03/29 19:23:20 by marvin           ###   ########.fr       */
+/*   Updated: 2023/04/04 17:39:31 by ayumusak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ int	main(int ac, char **av)
 			clear_map_exit(map, ERROR_MAP);
 		if (map)
 			get_position(map);
-		get_data(&data, map);
-		exit (0);
 		data.mlx = mlx_init();
 		data.mlx_win = mlx_new_window(data.mlx, WIN_WIDTH, WIN_HEIGHT, "...");
-		//add
+		get_data(&data, map);
 		mlx_loop(data.mlx);
 	}
 	else

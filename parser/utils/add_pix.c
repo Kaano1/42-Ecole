@@ -12,6 +12,20 @@
 
 #include "../../include/cub3d.h"
 
+int	is_xpm(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while (str[i] && str[i] != '.' && str[i + 1] == 'x')
+		i++;
+	i++;
+	if (str[i] != 'x' || str[i + 1] != 'p' ||
+		str[i + 2] != 'm' || !is_space(str[i + 3]))
+		return (1);
+	return (0);
+}
+
 int	difch(char **sp_pix)
 {
 	int	i;
@@ -21,6 +35,8 @@ int	difch(char **sp_pix)
 	while (i < 3)
 	{
 		j = 0;
+		if (is_xpm(sp_pix[i]))
+			return (1);
 		while (sp_pix[i][j])
 		{
 			if (!ft_isdigit(sp_pix[i][j]) && !is_space(sp_pix[i][j]))

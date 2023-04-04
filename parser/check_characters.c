@@ -139,8 +139,10 @@ int	check_double_map(char **map, int y, int x)
 //invalid texture,
 int	check_wall(char **map, int y, int x)
 {
-	check_double_map(map, y, x);
-	checking_zero(map, y - 1, x);
+	if (check_double_map(map, y, x))
+		return (1);
+	if (checking_zero(map, y - 1, x))
+		return (1);
 	while (map[y] != NULL)
 	{
 		x = 0;

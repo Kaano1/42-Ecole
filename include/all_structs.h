@@ -28,6 +28,8 @@ typedef struct s_found
 {
 	float	distance;
 	float	rate;
+	float	x;
+	float	y;
 }	t_found;
 
 typedef struct s_player
@@ -51,6 +53,7 @@ typedef struct s_keys
 	int	d;
 	int	right;
 	int	left;
+	int	speed;
 }	t_keys;
 
 typedef struct s_pixel
@@ -71,7 +74,6 @@ typedef struct s_map
 	char	*we;
 	int		x;
 	int		y;
-	int		line_max;
 	float	ang;
 	int		many_line;
 	t_pixel	f;
@@ -83,6 +85,7 @@ typedef struct s_data
 	void		*mlx;
 	void		*mlx_win;
 	t_image		screen;
+	t_image		part_of_map;
 	int			**map;
 	int			y_size;
 	int			x_size;
@@ -93,6 +96,7 @@ typedef struct s_data
 	float		look;
 	int			active_img;
 	t_keys		keys;
+	t_map		*map_in_data;
 }	t_data;
 
 #endif
