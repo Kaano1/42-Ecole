@@ -69,7 +69,6 @@ void	printMap(char **map)
 	}
 	printf("\n");
 }
-//0 ların 4 tarafına bakabiliriz ardından 0 ların içerisinde flood_fill yapabiliriz ve içerisinde boşluk varsa açtırmayabiliriz.
 
 int	map_len(char **map)
 {
@@ -134,10 +133,7 @@ int	check_double_map(char **map, int y, int x)
 		y++;
 	}
 	return (0);
-}
-
-//invalid texture,
-int	check_wall(char **map, int y, int x)
+}int	check_wall(char **map, int y, int x)
 {
 	if (check_double_map(map, y, x))
 		return (1);
@@ -157,40 +153,3 @@ int	check_wall(char **map, int y, int x)
 	printMap(map);
 	return (0);
 }
-
-//birebir aynı yada alt tarafın tamamıyla 1 olması durumunda
-//yukarının ince bir şekilde dizayn edilmesi gerekiyor.
-
-//çözüm:
-//duvarlar 2 ye çevrilir o sırada açıkta kalan 1 veya 0 olan bir değer
-//var mı diye kontrol
-//başta 0 var mı diye ön kontroller doğru yapacağız her zaman 
-//0 ıncı indexte olması imkansız ardından fazla olan 2 leri space
-//yapacak bir şey yapmamız gerekiyor.
-//sonrasında tekrar 1 e dönüştüreceğiz
-/*
-int	check_wall(t_map *game)
-{
-	int	j;
-	int	i;
-
-	i = -1;
-	while (game->map[++i])
-	{
-		j = -1;
-		while (!(game->map[i][++j]))
-		{
-			if (game->map[i][++j] != 1)
-			{
-				if ((game->map[i][j + 1] == '\t') || (game->map[i][j + 1] == ' ') \
-				||(game->map[i][j - 1] == '\t') || (game->map[i][j - 1] == ' ') \
-				||(game->map[i + 1][j] == '\t') || (game->map[i + 1][j] == ' ') \
-				||(game->map[i - 1][j] == '\t') || (game->map[i - 1][j] == ' '))
-					ft_putstr_fd_err("WALL ERROR\n", 2);
-			}
-		}
-
-}
-	return(1);
-}
-*/

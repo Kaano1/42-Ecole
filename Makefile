@@ -9,9 +9,9 @@ OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-FRAMEWORK = -framework OpenGL -framework AppKit
+FRAMEWORK = -lm -lXext -lX11
 
-CFLAGS = -g #-Wall -Wextra -Werror
+CFLAGS = #-Wall -Wextra -Werror
 
 NAME = cub3D
 

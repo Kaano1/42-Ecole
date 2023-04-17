@@ -3,14 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:44:05 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/04/04 17:39:31 by ayumusak         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:02:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/cub3d.h"
+
+void	init_image(t_data *data)
+{
+	data->screen.img = mlx_new_image(data->mlx, WIN_WIDTH, WIN_HEIGHT);
+	data->screen.width = WIN_WIDTH;
+	data->screen.height = WIN_HEIGHT;
+	data->screen.addr = mlx_get_data_addr(data->screen.img, &data->screen.bbp, \
+	&data->screen.line_len, &data->screen.endian);
+	data->part_of_map.img = mlx_new_image(data->mlx, 200, 200);
+	data->part_of_map.width = 200;
+	data->part_of_map.height = 200;
+	data->part_of_map.addr = mlx_get_data_addr(data->part_of_map.img, \
+		&data->part_of_map.bbp, &data->part_of_map.line_len, \
+			&data->part_of_map.endian);
+}
 
 int	main(int ac, char **av)
 {

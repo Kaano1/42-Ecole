@@ -60,7 +60,6 @@ void	get_args(t_data *data, t_map *map)
 {
 	data->imgs[0].img = mlx_xpm_file_to_image(data->mlx,
 			map->no, &data->imgs[0].width, &data->imgs[0].height);
-	exit (0);
 	data->imgs[1].img = mlx_xpm_file_to_image(data->mlx,
 			map->so, &data->imgs[1].width, &data->imgs[1].height);
 	data->imgs[2].img = mlx_xpm_file_to_image(data->mlx,
@@ -83,6 +82,5 @@ void	get_args(t_data *data, t_map *map)
 void	get_data(t_data *data, t_map *map)
 {
 	get_args(data, map);
-	exit (0);
 	get_int_map(data, map->map);
 }

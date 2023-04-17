@@ -12,20 +12,6 @@
 
 #include "../../include/cub3d.h"
 
-int	is_xpm(char *str)
-{
-	int	i;
-	
-	i = 0;
-	while (str[i] && str[i] != '.' && str[i + 1] == 'x')
-		i++;
-	i++;
-	if (str[i] != 'x' || str[i + 1] != 'p' ||
-		str[i + 2] != 'm' || !is_space(str[i + 3]))
-		return (1);
-	return (0);
-}
-
 int	difch(char **sp_pix)
 {
 	int	i;
@@ -35,8 +21,6 @@ int	difch(char **sp_pix)
 	while (i < 3)
 	{
 		j = 0;
-		if (is_xpm(sp_pix[i]))
-			return (1);
 		while (sp_pix[i][j])
 		{
 			if (!ft_isdigit(sp_pix[i][j]) && !is_space(sp_pix[i][j]))
@@ -68,6 +52,8 @@ t_pixel	add_pix(char *line, t_map *data, int sta, int i)
 		|| (!(pix.b <= 255 && pix.b >= 0)) || (i != 3 || difch(sp_pix)))
 	{
 		free_array(sp_pix);
+		printf("\n%d\n%d\n%d\n", pix.r, pix.g, pix.b);
+		printf("ID:%d\n", (!(pix.g <= 255 && pix.g >= 0)));
 		clear_map_exit(data, ERROR_RGB);
 	}
 	free_array(sp_pix);

@@ -12,6 +12,21 @@
 
 #include "../../include/cub3d.h"
 
+int	is_xpm(char *str)
+{
+	int	i;
+	
+	i = -1;
+	while (str[++i])
+		if (str[i] == '.' && str[i + 1] == 'x')
+			break;
+	i++;
+	if (str[i] == 'x' && str[i + 1] == 'p' &&
+		str[i + 2] == 'm' && !is_space(str[i + 3]))
+		return (1);
+	return (0);
+}
+
 int	ft_test(char *line, int start, int end)
 {
 	while (start < end)
@@ -36,6 +51,8 @@ char	*add_NSWE(char *line, t_map *map)
 	while (is_space(line[len]))
 		len--;
 	if (line[i] != '.' || line[i + 1] != '/' || ft_test(line, i, len))
+		clear_map_exit(map, ERROR_NSWE);
+	if (!is_xpm(line))
 		clear_map_exit(map, ERROR_NSWE);
 	send = ft_substr(line, i, ft_strlen(line) - 1);
 	return (send);
