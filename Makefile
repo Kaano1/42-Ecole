@@ -3,7 +3,11 @@ SRCS = main.c \
 	parser/utils/add_pix.c parser/utils/add_NSWE.c parser/utils/get_line.c parser/utils/add_map.c \
 	parser/utils/get_position.c \
 	parser/design_map.c parser/check_characters.c parser/arrange_tMap.c \
-	parser/get_data.c
+	parser/get_data.c \
+	start_render/start_game.c start_render/render.c start_render/look_slope.c \
+	start_render/draw.c start_render/image_pixel.c \
+	motion/motion_setting.c motion/event_down.c motion/event_up.c motion/move.c \
+	motion/update.c
 
 OBJS = $(SRCS:.c=.o)
 

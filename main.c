@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:44:05 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/04/17 19:02:33 by marvin           ###   ########.fr       */
+/*   Updated: 2023/04/18 14:44:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ int	main(int ac, char **av)
 		data.mlx = mlx_init();
 		data.mlx_win = mlx_new_window(data.mlx, WIN_WIDTH, WIN_HEIGHT, "...");
 		get_data(&data, map);
+		init_image(&data);
+		start_game(&data, map);
+		motion_setting(&data);
 		mlx_loop(data.mlx);
 	}
 	else

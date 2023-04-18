@@ -13,6 +13,9 @@
 #ifndef MACRO_H
 # define MACRO_H
 
+# define PI 3.14159f
+# define ANLE_TO_RADIAN 0.0174532f
+
 # define ERROR_NSWE			"Error\nNO, SO, WE or EA has a problem\n"
 # define ERROR_RGB			"Error\nRGB doesn't have appropriate values\n"
 # define ERROR_MAP			"Error\nMap has a problem\n"
