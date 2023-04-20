@@ -16,7 +16,7 @@ int	get_line(char **line, int fd, int key)
 {
 	char	*str;
 	int		end_i;
-	int		i;
+	size_t	i;
 
 	str = get_next_line(fd);
 	if (!str)

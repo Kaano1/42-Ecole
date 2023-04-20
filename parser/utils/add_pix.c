@@ -52,8 +52,6 @@ t_pixel	add_pix(char *line, t_map *data, int sta, int i)
 		|| (!(pix.b <= 255 && pix.b >= 0)) || (i != 3 || difch(sp_pix)))
 	{
 		free_array(sp_pix);
-		printf("\n%d\n%d\n%d\n", pix.r, pix.g, pix.b);
-		printf("ID:%d\n", (!(pix.g <= 255 && pix.g >= 0)));
 		clear_map_exit(data, ERROR_RGB);
 	}
 	free_array(sp_pix);

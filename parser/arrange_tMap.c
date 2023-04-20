@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arrange_tMap.c                                     :+:      :+:    :+:   */
+/*   arrange_tmap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -29,7 +29,7 @@ int	many_line(int fd)
 	return (i);
 }
 
-void	Vazero(char *file, t_map *map)
+void	value_zero(char *file, t_map *map)
 {
 	int	fd;
 
@@ -40,7 +40,7 @@ void	Vazero(char *file, t_map *map)
 	close(fd);
 }
 
-t_map	*arrange_tMap(char *file)
+t_map	*arrange_tmap(char *file)
 {
 	t_map	*map;
 	int		fd;
@@ -52,7 +52,7 @@ t_map	*arrange_tMap(char *file)
 		exit(1);
 	}
 	map = ft_calloc(sizeof(t_map), 1);
-	Vazero(file, map);
+	value_zero(file, map);
 	map = design_map(fd, map, 0);
 	if (add_map(fd, map))
 	{

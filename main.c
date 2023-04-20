@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:44:05 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/04/18 14:44:38 by marvin           ###   ########.fr       */
+/*   Updated: 2023/04/19 14:46:00 by ayumusak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 
 	if (ac == 2 && !ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 5))
 	{
-		map = arrange_tMap(av[1]);
+		map = arrange_tmap(av[1]);
 		check_characters(map);
 		if (check_wall(map->map, 0, 0))
 			clear_map_exit(map, ERROR_MAP);

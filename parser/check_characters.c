@@ -51,52 +51,6 @@ int	check_characters(t_map *data)
 	return (0);
 }
 
-void	printMap(char **map)
-{
-	int	i = 0;
-	int j = 0;
-
-	while (map[j])
-	{
-		i = 0;
-		printf("%d.", j);
-		while (map[j][i])
-		{
-			printf("%c", map[j][i]);
-			i++;
-		}
-		j++;
-	}
-	printf("\n");
-}
-
-int	map_len(char **map)
-{
-	int	y;
-
-	y = 0;
-	while (map[y])
-		y++;
-	return (y);
-}
-
-int	condition(char **map, int y, int x)
-{
-	if (y == 0 || x == 0)
-		return (1);
-	if (x != 0 && is_space(map[y][x + 1]))
-		return (1);
-	else if (map[y][x + 1] == 0 || is_space(map[y][x + 1]))
-		return (1);
-	else if (!(y == 0 && x > ft_strlen(map[y - 1])) &&
-		(is_space(map[y + 1][x])))
-		return (1);
-	else if (!(y == map_len(map) && x > ft_strlen(map[y + 1])) &&
-			(is_space(map[y + 1][x])))
-		return (1);
-	return (0);
-}
-
 int	checking_zero(char **map, int y, int x)
 {
 	while (map[++y])
@@ -107,8 +61,6 @@ int	checking_zero(char **map, int y, int x)
 			if (map[y][x] == '0' && condition(map, y, x))
 			{
 				map[y][x] = 'X';
-				printMap(map);
-				printf("%c--%d--%d", map[y][x], y, x);
 				return (1);
 			}
 			x++;
@@ -133,7 +85,9 @@ int	check_double_map(char **map, int y, int x)
 		y++;
 	}
 	return (0);
-}int	check_wall(char **map, int y, int x)
+}
+
+int	check_wall(char **map, int y, int x)
 {
 	if (check_double_map(map, y, x))
 		return (1);
@@ -150,6 +104,5 @@ int	check_double_map(char **map, int y, int x)
 		}
 		y++;
 	}
-	printMap(map);
 	return (0);
 }

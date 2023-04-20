@@ -6,7 +6,7 @@
 /*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:57:21 by ayumusak          #+#    #+#             */
-/*   Updated: 2023/03/20 19:30:45 by ayumusak         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:00:49 by ayumusak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ t_map	*design_map(int fd, t_map *map, int i)
 	{
 		i = get_line(&line, fd, 1);
 		if (i != -1 && !ft_strncmp(line, "NO ", 3))
-			map->no = add_NSWE(line, map);
+			map->no = add_nswe(line, map);
 		else if (i != -1 && !ft_strncmp(line, "SO ", 3))
-			map->so = add_NSWE(line, map);
+			map->so = add_nswe(line, map);
 		else if (i != -1 && !ft_strncmp(line, "WE ", 3))
-			map->we = add_NSWE(line, map);
+			map->we = add_nswe(line, map);
 		else if (i != -1 && !ft_strncmp(line, "EA ", 3))
-			map->ea = add_NSWE(line, map);
+			map->ea = add_nswe(line, map);
 		else if (i != -1 && !ft_strncmp(line, "F ", 2))
 			map->f = add_pix((line + 2), map, map->f.sta, 0);
 		else if (i != -1 && !ft_strncmp(line, "C ", 2))

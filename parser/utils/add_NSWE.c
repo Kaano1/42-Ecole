@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_NSWE.c                                         :+:      :+:    :+:   */
+/*   add_nswe.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayumusak <ayumusak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -15,14 +15,14 @@
 int	is_xpm(char *str)
 {
 	int	i;
-	
+
 	i = -1;
 	while (str[++i])
 		if (str[i] == '.' && str[i + 1] == 'x')
-			break;
+			break ;
 	i++;
-	if (str[i] == 'x' && str[i + 1] == 'p' &&
-		str[i + 2] == 'm' && !is_space(str[i + 3]))
+	if ((str[i] == 'x' && str[i + 1] == 'p')
+		&& (str[i + 2] == 'm' && !is_space(str[i + 3])))
 		return (1);
 	return (0);
 }
@@ -38,7 +38,7 @@ int	ft_test(char *line, int start, int end)
 	return (0);
 }
 
-char	*add_NSWE(char *line, t_map *map)
+char	*add_nswe(char *line, t_map *map)
 {
 	char	*send;
 	int		i;
