@@ -12,14 +12,13 @@
 
 #include "../include/cub3d.h"
 
-int	design_map_continue(int i, char **line, t_map **map, int fd)
+void	design_map_continue(int i, char **line, t_map **map, int fd)
 {
 	if (i != 42 && *line != NULL)
 	{
 		close(fd);
 		clear_map_exit(*map, ERROR_MAP);
 	}
-	return (1);
 }
 
 t_map	*design_map(int fd, t_map *map, int i)

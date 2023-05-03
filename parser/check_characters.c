@@ -59,10 +59,7 @@ int	checking_zero(char **map, int y, int x)
 		while (map[y][x])
 		{
 			if (map[y][x] == '0' && condition(map, y, x))
-			{
-				map[y][x] = 'X';
 				return (1);
-			}
 			x++;
 		}
 	}
