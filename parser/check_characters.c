@@ -73,17 +73,15 @@ int	check_double_map(char **map, int y, int x)
 	key = 0;
 	while (map[y])
 	{
-		if (ft_strchr(" ", map[y][x]) && key == 0 &&
-			(!ft_strchr("01NSEW", map[y][x])))
+		if (key == 0 && (!ft_strchr("01NSEW", map[y][x])))
 			key++;
-		else if ((!ft_strchr(" 01NSEW", map[y][x])) &&
+		else if ((ft_strchr(" 01NSEW", map[y][x])) &&
 			key == 1)
 			return (1);
 		y++;
 	}
 	return (0);
 }
-
 int	check_wall(char **map, int y, int x)
 {
 	if (check_double_map(map, y, x))
