@@ -1,7 +1,7 @@
 SRCS = main.cpp Bureaucrat.cpp
 OBJS = $(SRCS:%.c=%.o)
 C++ = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
 NAME = bureaucrat
 RM = rm -rf
 

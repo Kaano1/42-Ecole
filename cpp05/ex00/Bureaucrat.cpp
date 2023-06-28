@@ -10,30 +10,35 @@ Bureaucrat::Bureaucrat(const Bureaucrat& oth): name(oth.name), grade(oth.grade)
 	cout << "Bureaucrat copy constructor is working" << endl;
 }
 
-Bureaucrat::~Bureaucrat();
+Bureaucrat::~Bureaucrat()
 {
 	cout << "Bureaucrat is destroyed" << endl;
 }
 
-Bureaucrat	Bureaucrat::&operator=(const Bureaucrat &oth);
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& oth)
 {
-	cout << "Equal operator loading is work" << endl;
-	this->grade = oth->grade;
-	this->name = oth->name;
+    cout << "Equal operator loading is work" << endl;
+    this->grade = oth.getGrade();
+    return *this;
 }
 
-const string	Bureaucrat::getName(); const
+const string	Bureaucrat::getName() const
 {
 	return (this->name);
 }
 
-int		Bureaucrat::getGrade(); const
+int		Bureaucrat::getGrade() const
 {
 	return (this->grade);
 }
 
-ostream	&Bureaucrat::opeartor<<(ostream &out, Bureaucrat &oth)
+void	Bureaucrat::setGrade(int be)
 {
-	out << oth->name << ", bureaucrat grade " << oth->grade << endl;
+}
+
+
+ostream	&operator<<(ostream &out, Bureaucrat &oth)
+{
+	out << oth.getName() << ", bureaucrat grade " << oth.getGrade() << endl;
 	return (out);
 }
