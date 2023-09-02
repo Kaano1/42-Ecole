@@ -80,9 +80,7 @@ void	Server::removeUserFrom(const string &channel, Person &user)
 	for (vector<Person *>::size_type i = 0; i < userList.size(); i++)
 	{
 		Person *target = userList[i];
-		if (i == 0 && target == &user){ // this man is mod, drop the moderator
 
-		}
 		if (target && target->getFd() == fd)
 		{
 			userList.erase(userList.begin() + i);
