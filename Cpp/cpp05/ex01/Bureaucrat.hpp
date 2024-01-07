@@ -14,8 +14,8 @@ using std::string;
 class Bureaucrat
 {
 	private:
-		string name;
-		int grade;
+		string	name;
+		int		grade;
 
 	public:
 		Bureaucrat();
@@ -36,16 +36,19 @@ class Bureaucrat
 		void			incrementGrade();
 		void			decrementGrade();
 
+		void			signForm(class Form &form);
+
 		class GradeTooHighException : public exception
 		{
 			virtual const char *what() const throw();
 		};
+
 		class GradeTooLowException : public exception
 		{
 			virtual const char *what() const throw();
 		};
 };
 
-ostream					&operator<<(ostream &os, const Bureaucrat &oth);
+ostream				&operator<<(ostream &os, const Bureaucrat &oth);
 
 #endif

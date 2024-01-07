@@ -1,8 +1,23 @@
 #include "Bureaucrat.hpp"
 
-int	main(void)
+int main()
 {
-	Bureaucrat cpp;
+	try 
+	{
+		Bureaucrat bureaucrat("Daryl", 3);
+		cout << bureaucrat << endl;
 
-	cout << "hello" << endl;
+		bureaucrat.incrementGrade();
+		cout << bureaucrat << endl;
+
+		bureaucrat.decrementGrade();
+		cout << bureaucrat << endl;
+
+		Bureaucrat invalidBureaucrat("Rick", 0);
+	} 
+	catch (const exception &e) 
+	{
+		cout << "Exception caught: " << e.what() << endl;
+	}
+	return (0);
 }
